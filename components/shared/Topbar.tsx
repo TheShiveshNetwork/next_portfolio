@@ -25,7 +25,7 @@ const Topbar = () => {
     }, true)
 
     return (
-        <div className={`p-10 transition-all dark:bg-black bg-glassmorphism z-50 top-0 w-full ${fixedScrollbar ? "sticky px-8 py-6 opacity-9 top-0 left-0" : ""} ${menuActive ? "h-screen sticky dark:opacity-95 p-16 backdrop-blur-2xl" : !fixedScrollbar ? "backdrop-blur-sm dark:opacity-60 bg-transparent" : ""}`}>
+        <div className={`p-10 transition-all dark:bg-black bg-glassmorphism z-50 top-0 w-full ${fixedScrollbar ? "sticky bg-white px-8 py-6 opacity-95 top-0 left-0" : ""} ${menuActive ? "h-screen sticky dark:opacity-95 p-16 backdrop-blur-2xl" : !fixedScrollbar ? "backdrop-blur-sm dark:opacity-60 bg-transparent" : ""}`}>
 
             <div className='w-full flex items-center justify-between'>
                 <h1 className='text-xl'>
