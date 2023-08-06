@@ -1,0 +1,39 @@
+.cursorRing {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(31, 30, 30, 0.808);
+    outline: none;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transition-duration: 300ms;
+    transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    will-change: width, height, transform, border;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.cursorDot {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    pointer-events: none;
+}
+
+.dark .cursorDot {
+    border: 2px solid rgba(233, 233, 233, 0.808);
+}
+
+.dark .cursorRing {
+    border: 2px solid rgba(122, 122, 122, 0.808);
+}
