@@ -8,6 +8,7 @@ import Link from 'next/link';
 const Topbar = () => {
     const [menuActive, setMenuActive] = useState(false);
     const [darkMode, setDarkMode] = useState(false);
+    const [fixedScrollbar, setFixedScrollbar] = useState(false);
 
     if (darkMode) {
         document.documentElement.classList.add('dark')
@@ -15,8 +16,16 @@ const Topbar = () => {
         document.documentElement.classList.remove('dark')
     }
 
+    window.addEventListener('scroll', () => {
+        if (scrollY > 300) {
+            setFixedScrollbar(true);
+        } else {
+            setFixedScrollbar(false);
+        }
+    }, true)
+
     return (
-        <div className={`p-10 transition-all dark:bg-black bg-glassmorphism z-50 top-0 w-full ${menuActive ? "h-screen sticky dark:opacity-95 p-16 backdrop-blur-2xl" : "backdrop-blur-sm dark:opacity-60 bg-transparent"}`}>
+        <div className={`p-10 transition-all dark:bg-black bg-glassmorphism z-50 top-0 w-full ${fixedScrollbar ? "sticky px-8 py-6 opacity-9 top-0 left-0" : ""} ${menuActive ? "h-screen sticky dark:opacity-95 p-16 backdrop-blur-2xl" : !fixedScrollbar ? "backdrop-blur-sm dark:opacity-60 bg-transparent" : ""}`}>
 
             <div className='w-full flex items-center justify-between'>
                 <h1 className='text-xl'>
@@ -39,7 +48,7 @@ const Topbar = () => {
             {menuActive && (
                 <div className='h-full w-full flex flex-col gap-3 items-center justify-center'>
                     {menuContent.map((menu, index) => (
-                        <Link href={menu.link} onClick={() => setMenuActive(false)}>
+                        <Link href={menu.link} onClick={() => setMenuActive(false)} key={`menu-${index}`}>
                             <p className={`text-xl transition-all animate-[fadeIn_1s_ease-in-out]`}>{menu.name}</p>
                         </Link>
                     ))}
