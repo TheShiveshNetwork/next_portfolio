@@ -45,3 +45,21 @@ export const projectsContent = [
         buttonAction: "/about",
     },
 ]
+
+export const dashboardMenu = [
+    {
+        name: "Dashboard",
+        link: "/dashboard",
+        image: "/assets/dashboard.png",
+    },
+    {
+        name: "Post",
+        link: "/dashboard/create-post",
+        image: "/assets/post-create.png",
+    },
+    {
+        name: "Project",
+        link: "/dashboard/create-project",
+        image: "/assets/project-create.png",
+    },
+]
