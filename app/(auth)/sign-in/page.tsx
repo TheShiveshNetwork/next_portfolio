@@ -6,7 +6,8 @@ import { useRouter } from "next/navigation";
 
 
 const Page = () => {
-    const [error, setError] = useState("")
+    const [loggingIn, setLoggingIn] = useState(false);
+    const [error, setError] = useState("");
 
     const [userInfo, setUserInfo] = useState({
         email: "",
@@ -19,14 +20,21 @@ const Page = () => {
     const handleSignIn: FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
 
+        setLoggingIn(true);
+
         const res = await signIn("credentials", {
             email,
             password,
             redirect: false,
         });
 
-        if (res?.error) return setError(res.error);
+        if (res?.error) {
+            setLoggingIn(false);
+            return setError(res.error);
+        }
         router.replace('/dashboard')
+
+        setLoggingIn(false);
     }
 
     const handleChande: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
@@ -74,7 +82,8 @@ const Page = () => {
                     )}
                     <button
                         type="submit"
-                        className="w-full py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none"
+                        className="w-full py-2 transition-all bg-blue-500 disabled:bg-blue-200 text-white font-semibold rounded hover:bg-blue-600 focus:outline-none"
+                        disabled={loggingIn}
                     >
                         Log in
                     </button>

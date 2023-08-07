@@ -46,6 +46,21 @@ export const projectsContent = [
     },
 ]
 
+export const toolsUsed = [
+    {
+        name: "NextJS",
+        image: "/assets/nextjs.png"
+    },
+    {
+        name: "TailwindCSS",
+        image: "/assets/tailwind.png"
+    },
+    {
+        name: "MongoDB",
+        image: "/assets/mongodb.png"
+    },
+]
+
 export const dashboardMenu = [
     {
         name: "Dashboard",
