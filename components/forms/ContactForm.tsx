@@ -1,18 +1,30 @@
 "use client"
 
-import { useState } from 'react';
+import { sendEmail } from '@/lib/actions/mailer.actions';
+import { useRef } from 'react';
+
+interface FormData {
+    fullname: string;
+    email: string;
+    subject: string;
+    message: string;
+}
 
 const ContactForm = ({ className }: { className: string }) => {
-    const [fullname, setFullname] = useState("");
-    const [email, setEmail] = useState("");
-    const [subject, setSubject] = useState("");
-    const [message, setMessage] = useState("");
+    const form = useRef<HTMLFormElement>();
 
-    const handleSubmit = () => { }
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+
+        // @ts-ignore
+        sendEmail(form.current)
+    }
 
     return (
         <form
-            onSubmit={handleSubmit}
+        // @ts-ignore
+            ref={form}
+            onSubmit={(e) => handleSubmit(e)}
             className={className}
         >
             <h1 className="text-2xl font-bold mb-8">
@@ -27,10 +39,6 @@ const ContactForm = ({ className }: { className: string }) => {
             </label>
             <input
                 type="text"
-                value={fullname}
-                onChange={(e) => {
-                    setFullname(e.target.value);
-                }}
                 name="fullname"
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light mb-5"
             />
@@ -45,10 +53,6 @@ const ContactForm = ({ className }: { className: string }) => {
             <input
                 type="email"
                 name="email"
-                value={email}
-                onChange={(e) => {
-                    setEmail(e.target.value);
-                }}
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light mb-5"
             />
 
@@ -62,10 +66,6 @@ const ContactForm = ({ className }: { className: string }) => {
             <input
                 type="text"
                 name="subject"
-                value={subject}
-                onChange={(e) => {
-                    setSubject(e.target.value);
-                }}
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light mb-5"
             />
 
@@ -77,10 +77,6 @@ const ContactForm = ({ className }: { className: string }) => {
             </label>
             <textarea
                 name="message"
-                value={message}
-                onChange={(e) => {
-                    setMessage(e.target.value);
-                }}
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light mb-5"
             ></textarea>
 
