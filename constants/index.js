@@ -17,7 +17,7 @@ export const menuContent = [
     },
 ]
 
-export const githubCodeUrl = 'https://www.github.com/TheShiveshNetwork';
+export const githubCodeUrl = 'https://github.com/TheShiveshNetwork/next_portfolio';
 
 export const projectsContent = [
     {
