@@ -1,7 +1,7 @@
 "use client"
 
 import { sendEmail } from '@/lib/actions/mailer.actions';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 interface FormData {
     fullname: string;
@@ -13,16 +13,21 @@ interface FormData {
 const ContactForm = ({ className }: { className: string }) => {
     const form = useRef<HTMLFormElement>();
 
+    const [message, setMessage] = useState({
+        text: '',
+        success: false
+    })
+
     const handleSubmit = (e: any) => {
         e.preventDefault();
 
         // @ts-ignore
-        sendEmail(form.current)
+        sendEmail(form.current, setMessage)
     }
 
     return (
         <form
-        // @ts-ignore
+            // @ts-ignore
             ref={form}
             onSubmit={(e) => handleSubmit(e)}
             className={className}
@@ -30,6 +35,12 @@ const ContactForm = ({ className }: { className: string }) => {
             <h1 className="text-2xl font-bold mb-8">
                 Send a message
             </h1>
+            
+            {message.text && (
+                <div className={`${message.success ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"} p-3 rounded mb-10`}>
+                    {message.text}
+                </div>
+            )}
 
             <label
                 htmlFor="fullname"
@@ -101,6 +112,7 @@ const ContactForm = ({ className }: { className: string }) => {
                     </svg>
                 </button>
             </div>
+
         </form>
     )
 }
