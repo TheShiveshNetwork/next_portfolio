@@ -16,21 +16,24 @@ export default function Home() {
 
   return (
     <>
-      <div className='flex flex-col h-[calc(100vh-7rem)] items-center mt-10 px-10 lg:px-64'>
+      <div className='flex flex-col mb-20 sm:h-[calc(100vh-10rem)] sm:mb-10 items-center mt-10 px-10 lg:px-64'>
         <div className='w-full'>
           <h1 className='text-4xl font-semibold'>Crafting Digital Marvels</h1>
 
           <h1 className='text-3xl mt-5 mb-5'>
             I'M SHIVESH TIWARI
           </h1>
-          <p>
+          <div>
             A passionate and versatile Full Stack Web Developer with a knack for turning ideas into immersive online experiences.
             I'm on a mission to create remarkable digital experiences. With a portfolio of exciting
             <Link href={'/projects'} className='text-blue-500 uppercase font-semibold'> projects</Link> showcasing my passion for coding, you can learn more <Link href={'/about'} className='text-blue-500 uppercase font-semibold'> about me</Link>.
+            <p className='hidden sm:block'>
             From front-end magic to server-side wizardry, I love blending creativity with code to craft pixel-perfect websites and powerful web applications.
-            My work is a reflection of my dedication to seamless user experiences and elegant solutions. Let's collaborate and bring your digital visions to life!
+            My work is a reflection of my dedication to seamless user experiences and elegant solutions.
+            </p>
+            {' '} Let's collaborate and bring your digital visions to life!
             <Link href={'/contact'} className='text-blue-500 uppercase font-semibold'> contact</Link> me for new ventures, and let's build something amazing together!
-          </p>
+          </div>
 
           <TextScramble
             texts={texts}
@@ -84,7 +87,7 @@ export default function Home() {
           </div>
           <div className='flex flex-col items-center'>
             <Image
-              src="/assets/mongodb.svg"
+              src="/assets/tailwind.svg"
               alt='Tailwind'
               height={80}
               width={80}
