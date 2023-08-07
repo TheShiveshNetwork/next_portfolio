@@ -35,6 +35,7 @@ const Topbar = () => {
                         alt="logo"
                         height={30}
                         width={30}
+                        className='dark:invert'
                     />
                     <h1 className='text-2xl hidden sm:block font-semibold'>
                         TheShiveshNetwork
