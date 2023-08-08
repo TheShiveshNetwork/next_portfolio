@@ -5,6 +5,7 @@ import { authOptions } from '../api/auth/[...nextauth]/route'
 import { redirect } from 'next/navigation'
 import Topbar from '@/components/admin/Topbar'
 import Sidebar from '@/components/admin/Sidebar'
+import Bottombar from '@/components/admin/Bottombar'
 
 export default async function RootLayout({
     children,
@@ -24,6 +25,8 @@ export default async function RootLayout({
                     <main>
                         {children}
                     </main>
+
+                    <Bottombar />
                 </body>
             </html>
         </AuthProvider>

@@ -26,11 +26,15 @@ export const projectsContent = [
         isLatest: false,
         image: "/assets/project1.png",
         content: "I created a full stack social media app",
-        nativeButton: true,
-        hasButton: true,
-        customButton: false,
-        buttonText: "Get Code",
-        buttonAction: "/about",
+        nativeButton: {
+            text: "Code",
+            action: "/",
+        },
+        customButton: {
+            text: "Custom",
+            className: "",
+            action: "/",
+        }
     },
     {
         heading: "Full Stack Social Media App 2",
@@ -38,11 +42,6 @@ export const projectsContent = [
         isLatest: false,
         image: "/assets/project2.png",
         content: "I created a full stack social media app",
-        nativeButton: false,
-        hasButton: false,
-        customButton: false,
-        buttonText: "Get Code",
-        buttonAction: "/about",
     },
 ]
 

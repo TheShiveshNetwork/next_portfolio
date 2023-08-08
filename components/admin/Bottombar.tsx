@@ -1,17 +1,16 @@
 "use client"
 
-import { useState } from "react";
-import { dashboardMenu } from "@/constants"
+import { dashboardMenu } from "@/constants";
+import { usePathname } from "next/navigation";
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation";
 
-const Sidebar = () => {
+const Bottombar = () => {
     const pathname = usePathname();
-
+    
     return (
-        <section className="sticky left-0 bg-white top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto border-r border-r-dark-4 bg-dark-2 pb-5 pt-28 max-sm:hidden custom-scrollbar">
-            <div className="flex w-full flex-1 flex-col gap-6 px-6">
+        <section className="fixed bottom-0 z-10 w-full bg-white bg-opacity-75 rounded-t-3xl bg-glassmorphism p-4 backdrop-blur-lg xs:px-7 sm:hidden">
+            <div className="flex items-center justify-between gap-3 xs:gap-5">
                 {dashboardMenu.map((menu) => {
                     const isActive = pathname === menu.link;
 
@@ -19,7 +18,7 @@ const Sidebar = () => {
                         <Link
                             href={menu.link}
                             key={menu.name}
-                            className={`relative flex justify-start gap-4 rounded-lg p-4 ${isActive && 'bg-blue-500 text-white'}`}
+                            className={`relativeflex flex-col items-center gap-2 rounded-full p-2 sm:flex-1 sm:px-2 sm:py-2.5 ${isActive && 'bg-blue-500 text-white'}`}
                         >
                             <Image
                                 src={menu.image}
@@ -28,8 +27,8 @@ const Sidebar = () => {
                                 height={24}
                                 className={`${isActive ? "invert" : ""}`}
                             />
-                            <p className="text-light-1 max-lg:hidden">
-                                {menu.name}
+                            <p className="text-light-1 text-subtle-medium max-md:hidden">
+                                {menu.name.split(/\s+/)[0]}
                             </p>
                         </Link>
                     )
@@ -39,4 +38,4 @@ const Sidebar = () => {
     )
 }
 
-export default Sidebar
+export default Bottombar

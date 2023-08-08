@@ -16,9 +16,6 @@ const Page = () => {
                     isLatest={project.isLatest}
                     nativeButton={project.nativeButton}
                     customButton={project.customButton}
-                    hasButton={project.hasButton}
-                    buttonText={project.buttonText}
-                    buttonAction={project.buttonAction}
                 />
             ))}
         </div>

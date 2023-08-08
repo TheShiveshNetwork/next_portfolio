@@ -7,14 +7,19 @@ interface Props {
     heading: string;
     content: string;
     isLatest?: boolean;
-    nativeButton?: boolean;
-    customButton: boolean;
-    hasButton: boolean;
-    buttonText?: string;
-    buttonAction?: string | "/";
+    nativeButton?: {
+        text: string,
+        className?: string,
+        action: string,
+    };
+    customButton?: {
+        text: string,
+        className: string,
+        action: string,
+    };
 }
 
-const ProjectsTimeline = ({ image, date, heading, content, isLatest, nativeButton, customButton, hasButton, buttonAction, buttonText }: Props) => {
+const ProjectsTimeline = ({ image, date, heading, content, isLatest, nativeButton, customButton }: Props) => {
     return (
         <ol className="relative border-l border-gray-200 dark:border-gray-700">
             <li className="mb-10 ml-6">
@@ -51,22 +56,22 @@ const ProjectsTimeline = ({ image, date, heading, content, isLatest, nativeButto
                     {content}
                 </p>
 
-                {hasButton && nativeButton && (
+                {customButton && (
                     <Link
-                    href={`${buttonAction}`}
-                    target="_blank"
-                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">
-                        {buttonText}
+                        href={`${customButton.action}`}
+                        target='_blank'
+                        className={`${customButton.className ? customButton.className : 'px-4 py-2 mb-20 bg-violet-950 text-white rounded-lg hover:animate-bounce'}`}
+                    >
+                        {customButton.text}
                     </Link>
                 )}
 
-                {hasButton && customButton && (
+                {nativeButton && (
                     <Link
-                        href={`${buttonAction}`}
-                        target='_blank'
-                        className='px-4 py-2 mb-20 bg-violet-950 text-white rounded-lg hover:animate-bounce'
-                    >
-                        {buttonText}
+                        href={`${nativeButton.action}`}
+                        target="_blank"
+                        className={`${nativeButton.className ? nativeButton.className : "inline-flex items-center px-4 py-2 ml-5 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"}`}>
+                        {nativeButton.text}
                     </Link>
                 )}
             </li>
