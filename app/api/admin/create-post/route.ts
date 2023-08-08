@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 
 interface NewPostRequest {
     title: string,
+    description: string,
     content: string,
     author: string,
 }
@@ -21,6 +22,7 @@ export const POST = async (req: Request): Promise<NewResponse> => {
         post: {
             id: post._id.toString(),
             title: post.title,
+            description: post.description,
             content: post.content,
             author: post.author,
         },

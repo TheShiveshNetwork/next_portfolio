@@ -11,6 +11,7 @@ const Page = () => {
 
     const [formData, setFormData] = useState({
         title: "",
+        description: "",
         content: "",
         author: "",
         path: "",
@@ -67,6 +68,19 @@ const Page = () => {
                             id="title"
                             name="title"
                             value={formData.title}
+                            onChange={handleInputChange}
+                            className="w-full px-3 py-2 rounded border focus:outline-none focus:border-blue-500"
+                        />
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="description" className="block text-sm font-medium">
+                            Description
+                        </label>
+                        <input
+                            type="text"
+                            id="description"
+                            name="description"
+                            value={formData.description}
                             onChange={handleInputChange}
                             className="w-full px-3 py-2 rounded border focus:outline-none focus:border-blue-500"
                         />
