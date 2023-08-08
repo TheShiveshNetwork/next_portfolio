@@ -9,7 +9,6 @@ const Page = () => {
         date: "",
         heading: "",
         content: "",
-        isLatest: false,
         nativeButton: {
             text: "",
             className: "",

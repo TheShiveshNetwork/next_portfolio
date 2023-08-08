@@ -19,32 +19,6 @@ export const menuContent = [
 
 export const githubCodeUrl = 'https://github.com/TheShiveshNetwork/next_portfolio';
 
-export const projectsContent = [
-    {
-        heading: "Full Stack Social Media App",
-        date: "23 Aug 2022",
-        isLatest: false,
-        image: "/assets/project1.png",
-        content: "I created a full stack social media app",
-        nativeButton: {
-            text: "Code",
-            action: "/",
-        },
-        customButton: {
-            text: "Custom",
-            className: "",
-            action: "/",
-        }
-    },
-    {
-        heading: "Full Stack Social Media App 2",
-        date: "23 Aug 2022",
-        isLatest: false,
-        image: "/assets/project2.png",
-        content: "I created a full stack social media app",
-    },
-]
-
 export const toolsUsed = [
     {
         name: "NextJS",

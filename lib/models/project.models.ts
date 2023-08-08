@@ -5,7 +5,6 @@ interface ProjectDocument extends Document {
     date: string;
     heading: string;
     content: string;
-    isLatest: boolean;
     nativeButton: {
         text: string,
         className: string,
@@ -23,7 +22,6 @@ const projectSchema = new Schema<ProjectDocument>({
     date: { type: String, required: true },
     heading: { type: String, required: true },
     content: { type: String, required: true },
-    isLatest: { type: Boolean },
     nativeButton: {
         text: { type: String, required: true },
         className: { type: String },

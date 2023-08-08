@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
+    idx: number;
     image?: string;
     date: string;
     heading: string;
     content: string;
-    isLatest?: boolean;
     nativeButton?: {
         text: string,
         className?: string,
@@ -19,7 +19,7 @@ interface Props {
     };
 }
 
-const ProjectsTimeline = ({ image, date, heading, content, isLatest, nativeButton, customButton }: Props) => {
+const ProjectsTimeline = ({ image, date, idx, heading, content, nativeButton, customButton }: Props) => {
     return (
         <ol className="relative border-l border-gray-200 dark:border-gray-700">
             <li className="mb-10 ml-6">
@@ -43,11 +43,11 @@ const ProjectsTimeline = ({ image, date, heading, content, isLatest, nativeButto
 
                 <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                     {heading}
-                    {isLatest &&
+                    {idx === 0 && (
                         <span className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">
                             Latest
                         </span>
-                    }
+                    )}
                 </h3>
                 <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                     Released on {date}

@@ -6,7 +6,6 @@ interface projectProps {
     date: string;
     heading: string;
     content: string;
-    isLatest?: boolean;
     nativeButton?: {
         text: string,
         className?: string,
@@ -25,11 +24,11 @@ const ProjectsComponent = async () => {
     return projects?.reverse().map((project, idx) => (
         <ProjectsTimeline
             key={`project-${idx}`}
+            idx={idx}
             image={project.image}
             date={project.date}
             heading={project.heading}
             content={project.content}
-            isLatest={project.isLatest}
             nativeButton={project.nativeButton}
             customButton={project.customButton}
         />

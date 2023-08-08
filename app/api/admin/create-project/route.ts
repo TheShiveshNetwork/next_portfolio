@@ -7,7 +7,6 @@ interface NewProjectRequest {
     date: string;
     heading: string;
     content: string;
-    isLatest: boolean;
     nativeButton: {
         text: string,
         className: string,
@@ -36,7 +35,6 @@ export const POST = async (req: Request): Promise<NewResponse> => {
             date: project.date,
             heading: project.heading,
             content: project.content,
-            isLatest: project.isLatest,
             nativeButton: project.nativeButton,
             customButton: project.customButton,
         },
