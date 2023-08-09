@@ -51,7 +51,7 @@ const ContactForm = ({ className }: { className: string }) => {
             <input
                 type="text"
                 name="fullname"
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light mb-5"
+                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             />
 
 
@@ -64,7 +64,7 @@ const ContactForm = ({ className }: { className: string }) => {
             <input
                 type="email"
                 name="email"
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light mb-5"
+                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             />
 
 
@@ -77,7 +77,7 @@ const ContactForm = ({ className }: { className: string }) => {
             <input
                 type="text"
                 name="subject"
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light mb-5"
+                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             />
 
             <label
@@ -88,7 +88,7 @@ const ContactForm = ({ className }: { className: string }) => {
             </label>
             <textarea
                 name="message"
-                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light mb-5"
+                className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             ></textarea>
 
             <div className="flex flex-row items-center justify-start">

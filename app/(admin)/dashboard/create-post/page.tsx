@@ -55,12 +55,14 @@ const Page = () => {
     }
 
     return (
-        <div className="min-h-screen pt-20 pb-10 w-full flex items-center justify-center">
-            <div className="w-[50%] mx-auto p-6 border rounded-lg shadow-lg">
-                <h2 className="text-lg font-semibold mb-4">Create Project</h2>
+        <div className="min-h-screen sm:py-10 w-full flex justify-center">
+            <div className="flex-1 h-full px-2 sm:px-0">
+                <div className="flex mb-10 justify-between items-center">
+                    <h3 className="text-3xl font-semibold">CREATE PROJECT</h3>
+                </div>
                 <form onSubmit={handleFormSubmit}>
                     <div className="mb-4">
-                        <label htmlFor="title" className="block text-sm font-medium">
+                        <label htmlFor="title" className="block mb-2 text-sm font-medium">
                             Title
                         </label>
                         <input
@@ -73,7 +75,7 @@ const Page = () => {
                         />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="description" className="block text-sm font-medium">
+                        <label htmlFor="description" className="block mb-2 text-sm font-medium">
                             Description
                         </label>
                         <input
@@ -86,7 +88,7 @@ const Page = () => {
                         />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="content" className="block text-sm font-medium">
+                        <label htmlFor="content" className="block mb-2 text-sm font-medium">
                             Content
                         </label>
                         <textarea

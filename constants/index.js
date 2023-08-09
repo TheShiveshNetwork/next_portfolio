@@ -1,3 +1,8 @@
+export const FormatDate = (dateObj) => {
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    return new Intl.DateTimeFormat('en-US', options).format(dateObj);
+}
+
 export const menuContent = [
     {
         name: 'Home',

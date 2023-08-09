@@ -24,7 +24,7 @@ const HorizontalTimeline = async ({ className }: Props) => {
                             <div className="flex">
                                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{post.title}</h3>
                                 {idx === 0 && (
-                                    <span className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">
+                                    <span className="bg-blue-100 max-h-7 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">
                                         Latest
                                     </span>
                                 )}

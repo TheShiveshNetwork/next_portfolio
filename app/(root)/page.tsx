@@ -38,8 +38,6 @@ export default function Home() {
           <TextScramble
             texts={texts}
             className='text-2xl mt-5 sm:mt-10 md:mt-14 lg:mt-16 text-center'
-            pauseTime={2500}
-            letterSpeed={10}
           />
 
           <div className='mt-5 sm:mt-14 lg:mt-16 text-center flex flex-col items-center justify-center'>
