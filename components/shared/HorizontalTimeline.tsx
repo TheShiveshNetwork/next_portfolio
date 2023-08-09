@@ -1,3 +1,4 @@
+import { FormatDate } from "@/constants";
 import { fetchPosts } from "@/lib/actions/post.actions";
 
 interface Props {
@@ -29,7 +30,7 @@ const HorizontalTimeline = async ({ className }: Props) => {
                                     </span>
                                 )}
                             </div>
-                            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on {JSON.stringify(post.createdAt)}</time>
+                            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on {FormatDate(post.createdAt)}</time>
                             {post.description && (
                                 <p className="text-base font-normal text-gray-500 dark:text-gray-400">
                                     {post.description}
