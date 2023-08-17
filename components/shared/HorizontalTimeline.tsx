@@ -1,5 +1,6 @@
 import { FormatDate } from "@/constants";
 import { fetchPosts } from "@/lib/actions/post.actions";
+import Link from "next/link";
 
 interface Props {
     className: string;
@@ -23,7 +24,13 @@ const HorizontalTimeline = async ({ className }: Props) => {
                         </div>
                         <div className="mt-3 sm:pr-8">
                             <div className="flex">
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{post.title}</h3>
+                                <Link
+                                    href={`/post/${post._id}`}
+                                >
+                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                                        {post.title}
+                                    </h3>
+                                </Link>
                                 {idx === 0 && (
                                     <span className="bg-blue-100 max-h-7 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">
                                         Latest

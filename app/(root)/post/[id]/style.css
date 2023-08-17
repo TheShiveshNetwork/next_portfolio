@@ -1,0 +1,19 @@
+.markdown-content * {
+    font-size: 18px;
+}
+
+.markdown-content h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+.markdown-content h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.markdown-content p {
+    margin: 24px 0;
+}

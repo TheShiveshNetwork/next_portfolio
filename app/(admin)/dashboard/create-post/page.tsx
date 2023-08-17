@@ -58,7 +58,7 @@ const Page = () => {
         <div className="min-h-screen sm:py-10 w-full flex justify-center">
             <div className="flex-1 h-full px-2 sm:px-0">
                 <div className="flex mb-10 justify-between items-center">
-                    <h3 className="text-3xl font-semibold">CREATE PROJECT</h3>
+                    <h3 className="text-3xl font-semibold">CREATE POST</h3>
                 </div>
                 <form onSubmit={handleFormSubmit}>
                     <div className="mb-4">

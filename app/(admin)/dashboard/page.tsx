@@ -11,20 +11,22 @@ const Page = () => {
 
                 <div>
                     <InputSelect
-                        className="mt-10 flex items-center"
-                    />
-
-                    <DataCards
-                        fetchWhat="posts"
-                    />
-                </div>
-                <div>
-                    <InputSelect
+                        fetchWhat="projects"
                         className="mt-10 flex items-center"
                     />
 
                     <DataCards
                         fetchWhat="projects"
+                    />
+                </div>
+                <div>
+                    <InputSelect
+                        fetchWhat="posts"
+                        className="mt-10 flex items-center"
+                    />
+
+                    <DataCards
+                        fetchWhat="posts"
                     />
                 </div>
             </div>

@@ -2,12 +2,14 @@
 
 import { useState } from "react"
 
-const InputSelect = ({ className }: { className: string }) => {
+const InputSelect = ({ className, fetchWhat }: { className: string, fetchWhat: string }) => {
     const [selectedOption, setSelectedOption] = useState("All");
 
     return (
         <div className={className}>
-            <label htmlFor="posts" className="text-3xl font-light">Posts</label>
+            <label htmlFor="posts" className="text-3xl font-light capitalize">
+                {fetchWhat}
+            </label>
 
             <select
                 name="posts"

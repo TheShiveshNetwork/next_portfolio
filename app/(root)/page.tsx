@@ -102,7 +102,7 @@ export default function Home() {
           <div className="flex items-center">
             <Image
               className="w-10 h-10 rounded-full mr-4"
-              src="/assets/tailwind.svg"
+              src="/assets/tailwind.png"
               height={24}
               width={24}
               alt="Testimonial Author"
