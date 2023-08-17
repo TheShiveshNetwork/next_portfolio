@@ -1,9 +1,13 @@
 "use client"
 
+import { UploadDropzone } from "@/lib/uploadthing";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+// import { useUploadThing } from "@/lib/uploadthing";
+
 const Page = () => {
+    const router = useRouter();
     const [formData, setFormData] = useState({
         image: "",
         date: "",
@@ -21,10 +25,9 @@ const Page = () => {
         },
     });
 
-    const router = useRouter();
-
     const handleFormSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
+        console.log("Form:", formData)
 
         try {
             const response = await fetch('/api/admin/create-project', {
@@ -74,6 +77,10 @@ const Page = () => {
         }
     };
 
+    const handleUpload = (fileUrl: string) => {
+        setFormData({ ...formData, image: fileUrl })
+    }
+
     return (
         <div className="min-h-screen sm:py-10 w-full flex justify-center">
             <div className="flex-1 px-2 sm:px-0">
@@ -86,13 +93,23 @@ const Page = () => {
                             <label htmlFor="image" className="block mb-2 mt-3 text-sm font-medium">
                                 Image
                             </label>
-                            <input
-                                type="file"
-                                id="image"
-                                name="image"
-                                value={formData.image}
-                                onChange={handleInputChange}
-                                className="w-full px-3 py-2 rounded border focus:outline-none focus:border-blue-500"
+                            <UploadDropzone
+                                endpoint="imageUploader"
+                                onClientUploadComplete={(res) => {
+                                    // Do something with the response
+                                    // @ts-ignore
+                                    handleUpload(res[0].fileUrl);
+                                }}
+                                onUploadError={(error: Error) => {
+                                    // Do something with the error.
+                                    alert(`ERROR! ${error.message}`);
+                                }}
+                                className="w-full h-[300px]"
+                                appearance={
+                                    {
+                                        button: "p-4 mt-5",
+                                    }
+                                }
                             />
                         </div>
                         <div className="mb-4">

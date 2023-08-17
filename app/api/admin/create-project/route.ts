@@ -3,19 +3,19 @@ import { connectToDB } from "@/lib/mongoose";
 import { NextResponse } from "next/server";
 
 interface NewProjectRequest {
-    image: string;
+    image?: string;
     date: string;
     heading: string;
     content: string;
-    nativeButton: {
-        text: string,
-        className: string,
-        action: string,
+    nativeButton?: {
+        text?: string,
+        className?: string,
+        action?: string,
     };
-    customButton: {
-        text: string,
-        className: string,
-        action: string,
+    customButton?: {
+        text?: string,
+        className?: string,
+        action?: string,
     };
 }
 

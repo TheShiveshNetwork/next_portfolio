@@ -8,14 +8,14 @@ interface Props {
     heading: string;
     content: string;
     nativeButton?: {
-        text: string,
+        text?: string,
         className?: string,
         action: string,
     };
     customButton?: {
-        text: string,
-        className: string,
-        action: string,
+        text?: string,
+        className?: string,
+        action?: string,
     };
 }
 
