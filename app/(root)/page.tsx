@@ -1,6 +1,6 @@
 import HorizontalTimeline from '@/components/shared/HorizontalTimeline'
 import { ScrambleTexts } from '@/components/shared/TextScramble'
-import { githubCodeUrl, toolsUsed } from '@/constants'
+import { githubCodeUrl, satisfy, tilt_prism, toolsUsed, ubuntu } from '@/constants'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,10 +17,12 @@ export default function Home() {
   return (
     <>
       <div className='flex flex-col mb-20 sm:h-[calc(100vh-10rem)] sm:mb-10 items-center mt-10 px-10 lg:px-64'>
-        <div className='w-full'>
-          <h1 className='text-4xl font-semibold'>Crafting Digital Marvels</h1>
+        <div className='w-full flex flex-col'>
+          <h1 className={`${satisfy.className} text-5xl font-satisfy`}>
+            Crafting Digital Marvels
+          </h1>
 
-          <h1 className='text-3xl mt-5 mb-5'>
+          <h1 className='text-3xl mt-5 mb-5 font-extrabold'>
             I'M SHIVESH TIWARI
           </h1>
           <div>
@@ -28,17 +30,24 @@ export default function Home() {
             I'm on a mission to create remarkable digital experiences. With a portfolio of exciting
             <Link href={'/projects'} className='text-blue-500 uppercase font-semibold'> projects</Link> showcasing my passion for coding, you can learn more <Link href={'/about'} className='text-blue-500 uppercase font-semibold'> about me</Link>.
             <p className='hidden sm:block'>
-            From front-end magic to server-side wizardry, I love blending creativity with code to craft pixel-perfect websites and powerful web applications.
-            My work is a reflection of my dedication to seamless user experiences and elegant solutions.
+              From front-end magic to server-side wizardry, I love blending creativity with code to craft pixel-perfect websites and powerful web applications.
+              My work is a reflection of my dedication to seamless user experiences and elegant solutions.
             </p>
             {' '} Let's collaborate and bring your digital visions to life!
             <Link href={'/contact'} className='text-blue-500 uppercase font-semibold'> contact</Link> me for new ventures, and let's build something amazing together!
           </div>
 
-          <TextScramble
-            texts={texts}
-            className='text-2xl mt-5 sm:mt-10 md:mt-14 lg:mt-16 text-center'
-          />
+          <div className='bg-white dark:bg-slate-700 mt-5 sm:mt-10 md:mt-14 lg:mt-16 shadow-lg w-[70%] rounded-t-lg self-center'>
+            <div className="hidden sm:flex gap-2 p-2 w-full bg-gray-100 dark:bg-gray-800 rounded-t-lg justify-end">
+              <div className="bg-green-300 h-2 w-2 rounded-full" />
+              <div className="bg-yellow-300 h-2 w-2 rounded-full" />
+              <div className="bg-red-300 h-2 w-2 rounded-full" />
+            </div>
+            <TextScramble
+              texts={texts}
+              className={`text-xl p-5 text-center font-bold text-gray-800 dark:text-gray-400 ${ubuntu.className}`}
+            />
+          </div>
 
           <div className='mt-5 sm:mt-14 lg:mt-16 text-center flex flex-col items-center justify-center'>
             <p>
@@ -70,16 +79,16 @@ export default function Home() {
 
         <div className='flex items-center justify-center gap-5 sm:gap-10 my-20 flex-row'>
           {toolsUsed.map((tool) => (
-          <div className='flex flex-col justify-between items-center h-[120px]'>
-            <Image
-              src={tool.image}
-              alt='icon'
-              height={80}
-              width={80}
-              className='object-contain'
-            />
-            <p className='font-semibold text-sm'>{tool.name}</p>
-          </div>
+            <div className='flex flex-col justify-between items-center h-[120px]'>
+              <Image
+                src={tool.image}
+                alt='icon'
+                height={80}
+                width={80}
+                className='object-contain'
+              />
+              <p className='font-semibold text-sm'>{tool.name}</p>
+            </div>
           ))}
         </div>
 
@@ -102,14 +111,14 @@ export default function Home() {
           <div className="flex items-center">
             <Image
               className="w-10 h-10 rounded-full mr-4"
-              src="/assets/tailwind.png"
+              src="/assets/user.svg"
               height={24}
               width={24}
               alt="Testimonial Author"
             />
             <div>
-              <h4 className="text-gray-900 dark:text-gray-500 font-semibold">John Doe</h4>
-              <p className="text-gray-600 dark:text-gray-400">CEO, TechCo</p>
+              <h4 className="text-gray-900 dark:text-gray-500 font-semibold">Anonymous</h4>
+              <p className="text-gray-600 dark:text-gray-400">Front-end Developer</p>
             </div>
           </div>
         </div>

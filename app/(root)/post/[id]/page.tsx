@@ -9,7 +9,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
 
     return (
         <div className="p-10 sm:p-20">
-            <h1 className="text-center text-4xl mb-2 mt-0">{postData.title}</h1>
+            <h1 className="text-center text-4xl mb-2 mt-0 font-semibold">{postData.title}</h1>
 
             <div className="text-center font-light">{FormatDate(postData.createdAt)}</div>
 

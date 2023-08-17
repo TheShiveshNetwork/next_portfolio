@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import DotRing from '@/components/DotRing/DotRing'
 import dynamic from 'next/dynamic'
+import { montserrat } from '@/constants'
 
 const Topbar = dynamic(() => import('@/components/shared/Topbar'), { ssr: false })
 
@@ -25,7 +26,7 @@ export default function RootLayout({
       <Head>
         <title>TheShiveshNetwork</title>
       </Head>
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <Topbar />
 
         <DotRing />

@@ -1,7 +1,29 @@
+import { Montserrat, Tilt_Prism, Satisfy, Ubuntu } from "next/font/google"
+
 export const FormatDate = (dateObj) => {
     const options = { day: '2-digit', month: 'short', year: 'numeric' };
     return new Intl.DateTimeFormat('en-US', options).format(dateObj);
 }
+
+export const tilt_prism = Tilt_Prism({
+    subsets: ['latin'],
+    weight: ['400'],
+});
+
+export const ubuntu = Ubuntu({
+    subsets: ['latin'],
+    weight: ['400'],
+});
+
+export const montserrat = Montserrat({
+    subsets: ['latin'],
+    weight: ['400', '500', '600', '700'],
+});
+
+export const satisfy = Satisfy({
+    subsets: ['latin'],
+    weight: ['400'],
+});
 
 export const menuContent = [
     {

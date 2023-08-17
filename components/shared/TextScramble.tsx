@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react'
 
 
-const symbols: string[] = '!<>-_\\/[]{}—=+*^?#'.split('')
+const symbols: string[] = 'abcdefghijklmnopqrstuvwxyz?<>!'.split('')
 
 type ScrambleText = string;
 export type ScrambleTexts = ScrambleText[];
@@ -29,7 +29,7 @@ const nextItem = (array: Array<any>, currentItem: any) => {
 const TextScramble: React.FC<TextScrambleProps> = ({
     texts,
     className,
-    letterSpeed = 5,
+    letterSpeed = 100,
     nextLetterSpeed = 100,
     paused = false,
     pauseTime = 1500,
@@ -105,7 +105,11 @@ const TextScramble: React.FC<TextScrambleProps> = ({
         if (!paused) bakeText()
     }, [currentText, paused])
 
-    return <div className={`${className} transition-all ${!scrambling ? "text-purple-600" : ""}`}>{displayedText}</div>
+    return (
+        <div className={`${className} transition-all`}>
+            {displayedText}
+        </div>
+    )
 }
 
 export default TextScramble
