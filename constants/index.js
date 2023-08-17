@@ -78,3 +78,16 @@ export const dashboardMenu = [
         image: "/assets/project-create.png",
     },
 ]
+
+export const SocialData = [
+    {
+        name: 'Linkedin',
+        icon: '/assets/linkedin.svg',
+        url: "https://www.linkedin.com/in/shivesh-tiwari-88b451242",
+    },
+    {
+        name: 'Github',
+        icon: '/assets/github.svg',
+        url: "https://github.com/TheShiveshNetwork",
+    },
+]

@@ -1,4 +1,5 @@
 import HorizontalTimeline from '@/components/shared/HorizontalTimeline'
+import SocialLinks from '@/components/shared/SocialLinks'
 import { ScrambleTexts } from '@/components/shared/TextScramble'
 import { githubCodeUrl, satisfy, tilt_prism, toolsUsed, ubuntu } from '@/constants'
 import dynamic from 'next/dynamic'
@@ -25,6 +26,9 @@ export default function Home() {
           <h1 className='text-3xl mt-5 mb-5 font-extrabold'>
             I'M SHIVESH TIWARI
           </h1>
+
+          <SocialLinks className="mb-4" />
+
           <div>
             A passionate and versatile Full Stack Web Developer with a knack for turning ideas into immersive online experiences.
             I'm on a mission to create remarkable digital experiences. With a portfolio of exciting
@@ -37,7 +41,7 @@ export default function Home() {
             <Link href={'/contact'} className='text-blue-500 uppercase font-semibold'> contact</Link> me for new ventures, and let's build something amazing together!
           </div>
 
-          <div className='bg-white dark:bg-slate-700 mt-5 sm:mt-10 md:mt-14 lg:mt-16 shadow-lg w-[70%] rounded-t-lg self-center'>
+          <div className='sm:bg-white sm:dark:bg-slate-700 mt-5 sm:mt-10 md:mt-14 sm:shadow-lg sm:w-[70%] sm:rounded-t-lg self-center'>
             <div className="hidden sm:flex gap-2 p-2 w-full bg-gray-100 dark:bg-gray-800 rounded-t-lg justify-end">
               <div className="bg-green-300 h-2 w-2 rounded-full" />
               <div className="bg-yellow-300 h-2 w-2 rounded-full" />
@@ -49,7 +53,7 @@ export default function Home() {
             />
           </div>
 
-          <div className='mt-5 sm:mt-14 lg:mt-16 text-center flex flex-col items-center justify-center'>
+          <div className='mt-5 sm:mt-10 text-center flex flex-col items-center justify-center'>
             <p>
               See more About me
             </p>
