@@ -113,6 +113,21 @@ const Page = () => {
                             />
                         </div>
                         <div className="mb-4">
+                            <label htmlFor="image" className="block mb-2 mt-3 text-sm font-medium">
+                                Image Link
+                            </label>
+                            <input
+                                disabled
+                                type="text"
+                                id="image"
+                                name="image"
+                                value={formData.image}
+                                onChange={handleInputChange}
+                                className="w-full px-3 py-2 rounded border focus:outline-none focus:border-blue-500"
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
                             <label htmlFor="date" className="block mb-2 mt-3 text-sm font-medium">
                                 Date
                             </label>
