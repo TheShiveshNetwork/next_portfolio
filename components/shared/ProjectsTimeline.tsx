@@ -10,7 +10,7 @@ interface Props {
     nativeButton?: {
         text?: string,
         className?: string,
-        action: string,
+        action?: string,
     };
     customButton?: {
         text?: string,
@@ -56,7 +56,7 @@ const ProjectsTimeline = ({ image, date, idx, heading, content, nativeButton, cu
                     {content}
                 </p>
 
-                {customButton && (
+                {customButton?.text && (
                     <Link
                         href={`${customButton.action}`}
                         target='_blank'
@@ -66,7 +66,7 @@ const ProjectsTimeline = ({ image, date, idx, heading, content, nativeButton, cu
                     </Link>
                 )}
 
-                {nativeButton && (
+                {nativeButton?.text && (
                     <Link
                         href={`${nativeButton.action}`}
                         target="_blank"
