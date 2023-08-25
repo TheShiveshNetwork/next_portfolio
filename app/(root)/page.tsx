@@ -83,7 +83,7 @@ export default function Home() {
 
         <div className='flex items-center justify-center gap-5 sm:gap-10 my-20 flex-row'>
           {toolsUsed.map((tool) => (
-            <div className='flex flex-col justify-between items-center h-[120px]'>
+            <div key={`tool-${tool.name}`} className='flex flex-col justify-between items-center h-[120px]'>
               <Image
                 src={tool.image}
                 alt='icon'

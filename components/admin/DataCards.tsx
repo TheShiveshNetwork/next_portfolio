@@ -20,8 +20,9 @@ const DataCards = async ({ fetchWhat }: { fetchWhat: string }) => {
                 <div className="text-white/50 group-hover:text-white group-hover:smooth-hover text-center">Create {fetchWhat}</div>
             </Link>
 
-            {dataSet.map((data) => (
+            {dataSet.map((data, idx) => (
                 <Link
+                    key={`post-${idx}`}
                     href={`/post/${data._id}`}
                     target="_blank"
                     className="relative group bg-white shadow-lg transition-all py-10 sm:py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:bg-slate-100v hoer:smooth-hover">

@@ -7,6 +7,7 @@ const SocialLinks = ({ className }: { className?: string }) => {
         <div className={`${className} flex gap-3`}>
             {SocialData.map((item) => (
                 <Link
+                key={`${item.name}-link`}
                     target='_blank'
                     href={item.url}
                 >
