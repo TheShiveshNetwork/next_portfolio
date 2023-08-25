@@ -45,7 +45,7 @@ const Page = () => {
     return (
         <div className="h-screen flex items-center justify-center">
             <div className="mx-auto w-80 p-6 border rounded-lg shadow-lg">
-                <h2 className="text-lg font-semibold mb-4">User Registration</h2>
+                <h2 className="text-lg font-semibold mb-4">Admin Login</h2>
                 <form onSubmit={handleSignIn}>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-sm font-medium">
