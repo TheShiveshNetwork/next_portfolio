@@ -3,31 +3,37 @@
 import { sendEmail } from '@/lib/actions/mailer.actions';
 import { useRef, useState } from 'react';
 
-interface FormData {
-    fullname: string;
-    email: string;
-    subject: string;
-    message: string;
-}
-
 const ContactForm = ({ className }: { className: string }) => {
     const form = useRef<HTMLFormElement>(null);
+    const [formData, setFormData] = useState({
+        fullname: "",
+        email: "",
+        subject: "",
+        message: "",
+    })
+    const [sending, setSending] = useState(false);
 
     const [message, setMessage] = useState({
         text: '',
         success: false
     })
 
-    // const [error, setError] = useState({ text: })
+    const handleFormChange = (e: any) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    }
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
 
-        if (form.current === null) {
-            // @ts-ignore
-            sendEmail(form.current, setMessage)
+        if (formData.email === "" || formData.fullname === "" || formData.message === "" || formData.subject === "") {
+            setMessage({ text: "Please fill up the form!", success: false })
         } else {
-            setMessage({text: "Please fill up the form!", success: false})
+            // @ts-ignore
+            sendEmail(form.current, setMessage, setSending)
         }
     }
 
@@ -57,6 +63,8 @@ const ContactForm = ({ className }: { className: string }) => {
             <input
                 type="text"
                 name="fullname"
+                value={formData.fullname}
+                onChange={handleFormChange}
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             />
 
@@ -70,6 +78,8 @@ const ContactForm = ({ className }: { className: string }) => {
             <input
                 type="email"
                 name="email"
+                value={formData.email}
+                onChange={handleFormChange}
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             />
 
@@ -83,6 +93,8 @@ const ContactForm = ({ className }: { className: string }) => {
             <input
                 type="text"
                 name="subject"
+                value={formData.subject}
+                onChange={handleFormChange}
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             />
 
@@ -94,28 +106,36 @@ const ContactForm = ({ className }: { className: string }) => {
             </label>
             <textarea
                 name="message"
+                value={formData.message}
+                onChange={handleFormChange}
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             ></textarea>
 
             <div className="flex flex-row items-center justify-start">
                 <button
                     type="submit"
-                    className="px-10 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center"
+                    className="px-10 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center disabled:bg-[#bab7ff]"
+                    disabled={sending}
                 >
-                    Send
-                    <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        className="text-cyan-500 ml-2"
-                        fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M9.00967 5.12761H11.0097C12.1142 5.12761 13.468 5.89682 14.0335 6.8457L16.5089 11H21.0097C21.562 11 22.0097 11.4477 22.0097 12C22.0097 12.5523 21.562 13 21.0097 13H16.4138L13.9383 17.1543C13.3729 18.1032 12.0191 18.8724 10.9145 18.8724H8.91454L12.4138 13H5.42485L3.99036 15.4529H1.99036L4.00967 12L4.00967 11.967L2.00967 8.54712H4.00967L5.44417 11H12.5089L9.00967 5.12761Z"
-                            fill="currentColor"
-                        />
-                    </svg>
+                    {sending ?
+                        "Sending"
+                        : <>
+                            Send
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                className="text-cyan-500 ml-2"
+                                fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M9.00967 5.12761H11.0097C12.1142 5.12761 13.468 5.89682 14.0335 6.8457L16.5089 11H21.0097C21.562 11 22.0097 11.4477 22.0097 12C22.0097 12.5523 21.562 13 21.0097 13H16.4138L13.9383 17.1543C13.3729 18.1032 12.0191 18.8724 10.9145 18.8724H8.91454L12.4138 13H5.42485L3.99036 15.4529H1.99036L4.00967 12L4.00967 11.967L2.00967 8.54712H4.00967L5.44417 11H12.5089L9.00967 5.12761Z"
+                                    fill="currentColor"
+                                />
+                            </svg>
+                        </>
+                    }
                 </button>
             </div>
 
