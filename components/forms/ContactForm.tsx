@@ -11,18 +11,24 @@ interface FormData {
 }
 
 const ContactForm = ({ className }: { className: string }) => {
-    const form = useRef<HTMLFormElement>();
+    const form = useRef<HTMLFormElement>(null);
 
     const [message, setMessage] = useState({
         text: '',
         success: false
     })
 
+    // const [error, setError] = useState({ text: })
+
     const handleSubmit = (e: any) => {
         e.preventDefault();
 
-        // @ts-ignore
-        sendEmail(form.current, setMessage)
+        if (form.current === null) {
+            // @ts-ignore
+            sendEmail(form.current, setMessage)
+        } else {
+            setMessage({text: "Please fill up the form!", success: false})
+        }
     }
 
     return (
@@ -35,7 +41,7 @@ const ContactForm = ({ className }: { className: string }) => {
             <h1 className="text-2xl font-bold mb-8">
                 Send a message
             </h1>
-            
+
             {message.text && (
                 <div className={`${message.success ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"} p-3 rounded mb-10`}>
                     {message.text}
