@@ -6,6 +6,7 @@ import Head from 'next/head'
 import DotRing from '@/components/DotRing/DotRing'
 import dynamic from 'next/dynamic'
 import { montserrat } from '@/constants'
+import { Analytics } from '@vercel/analytics/react';
 
 const Topbar = dynamic(() => import('@/components/shared/Topbar'), { ssr: false })
 
@@ -34,6 +35,8 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+
+        <Analytics />
       </body>
     </html>
   )

@@ -68,7 +68,6 @@ const ContactForm = ({ className }: { className: string }) => {
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             />
 
-
             <label
                 htmlFor="email"
                 className=""
@@ -82,7 +81,6 @@ const ContactForm = ({ className }: { className: string }) => {
                 onChange={handleFormChange}
                 className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-gray-500 font-light mb-5"
             />
-
 
             <label
                 htmlFor="subject"
