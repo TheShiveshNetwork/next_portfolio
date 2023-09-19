@@ -1,6 +1,7 @@
 import { FormatDate } from "@/constants";
 import { fetchPosts } from "@/lib/actions/post.actions";
 import Link from "next/link";
+import PostCard from "./PostCard";
 
 interface Props {
     className: string;
@@ -24,28 +25,13 @@ const HorizontalTimeline = async ({ className }: Props) => {
                             </div>
                             <div className="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                         </div>
-                        <div className="mt-3 sm:pr-8">
-                            <div className="flex">
-                                <Link
-                                    href={`/post/${post._id}`}
-                                >
-                                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                                        {post.title}
-                                    </h3>
-                                </Link>
-                                {idx === 0 && (
-                                    <span className="bg-blue-100 max-h-7 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ml-3">
-                                        Latest
-                                    </span>
-                                )}
-                            </div>
-                            <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on {FormatDate(post.createdAt)}</time>
-                            {post.description && (
-                                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                                    {post.description}
-                                </p>
-                            )}
-                        </div>
+                        <PostCard
+                            idx={idx}
+                            id={post._id.toString()}
+                            title={post.title}
+                            description={post.description}
+                            createdAt={post.createdAt}
+                        />
                     </li>
                 ))}
             </ol>
