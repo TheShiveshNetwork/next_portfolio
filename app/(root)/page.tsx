@@ -79,10 +79,7 @@ export default function Home() {
       <section className='px-10 lg:px-64 flex flex-col items-center justify-center'>
         <h1 className='text-2xl text-center font-semibold'>I created this portfolio using the following tools</h1>
 
-        <p className='max-w-[500px] text-center font-light mt-5'>
-          Are you interested in reading the code of this Portfolio? Or do you want to create your own portfolio like this?
-          Welcome! The code of this Portfolio website is openly available. 🎉
-        </p>
+        <p className='max-w-[500px] text-center font-light mt-5'>This is an Open-Source project, so anyone can view the code of this Portfolio.</p>
 
         <div className='flex items-center justify-center gap-5 sm:gap-10 my-20 flex-row'>
           {toolsUsed.map((tool) => (
