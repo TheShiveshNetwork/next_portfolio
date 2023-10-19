@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <div className='flex flex-col mb-20 sm:h-[calc(100vh-10rem)] sm:mb-10 items-center mt-10 px-10 lg:px-64'>
         <div className='w-full flex flex-col'>
-          <h1 className={`${satisfy.className} font-['__Satisfy_d9d83d', '__Satisfy_Fallback_d9d83d'] text-5xl`}>
+          <h1 className={`${satisfy.className} font-satisfy text-5xl`}>
             Crafting Digital Marvels
           </h1>
 

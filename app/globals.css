@@ -25,3 +25,9 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #7878a3;
 }
+
+.font-satisfy {
+  font-family: '__Satisfy_d9d83d', '__Satisfy_Fallback_d9d83d';
+  font-weight: 400;
+  font-style: normal;
+}
