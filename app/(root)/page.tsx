@@ -1,7 +1,7 @@
 import HorizontalTimeline from '@/components/shared/HorizontalTimeline'
 import SocialLinks from '@/components/shared/SocialLinks'
 import { ScrambleTexts } from '@/components/shared/TextScramble'
-import { githubCodeUrl, satisfy, toolsUsed, ubuntu } from '@/constants'
+import { githubCodeUrl, satisfy, tilt_prism, toolsUsed, ubuntu } from '@/constants'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
 import Link from 'next/link'
