@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <div className='flex flex-col mb-20 sm:h-[calc(100vh-10rem)] sm:mb-10 items-center mt-10 px-10 lg:px-64'>
         <div className='w-full flex flex-col'>
-          <h1 className={`${satisfy.className} text-5xl font-satisfy`}>
+          <h1 className={`${satisfy.className} font-['__Satisfy_d9d83d', '__Satisfy_Fallback_d9d83d'] text-5xl`}>
             Crafting Digital Marvels
           </h1>
 
@@ -79,7 +79,9 @@ export default function Home() {
       <section className='px-10 lg:px-64 flex flex-col items-center justify-center'>
         <h1 className='text-2xl text-center font-semibold'>I created this portfolio using the following tools</h1>
 
-        <p className='max-w-[500px] text-center font-light mt-5'>This is an Open-Source project, so anyone can view the code of this Portfolio.</p>
+        <p className='max-w-[500px] text-center font-light mt-5'>
+          Are you interested in reading the code of this Portfolio? Or do you want to create your own portfolio like this? Welcome! The code of this Portfolio website is openly available. 🎉
+        </p>
 
         <div className='flex items-center justify-center gap-5 sm:gap-10 my-20 flex-row'>
           {toolsUsed.map((tool) => (
