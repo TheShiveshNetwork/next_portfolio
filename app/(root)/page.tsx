@@ -101,10 +101,16 @@ export default function Home() {
         <Link
           href={githubCodeUrl}
           target='_blank'
-          className='px-4 py-2 mb-20 bg-violet-950 text-white rounded-lg hover:animate-bounce'
+          className='px-4 py-2 bg-violet-950 text-white rounded-lg hover:animate-bounce'
         >
           View Code
         </Link>
+
+        <p className="text-sm my-2">OR</p>
+
+            <Link href="https://www.buymeacoffee.com/mrdevknown404" target="_blank" className="mb-20">
+                <Image src={"/assets/buy-me-a-coffee.png"} alt="buy me a coffee" height={41} width={174} />
+            </Link>
       </section>
 
       <section className='px-10 pb-10 flex flex-col items-center lg:px-64'>
