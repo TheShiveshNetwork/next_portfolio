@@ -16,6 +16,7 @@ const SocialLinks = ({ className }: { className?: string }) => {
                         alt={item.name}
                         width={20}
                         height={20}
+                        className="dark:invert"
                     />
                 </Link>
             ))}
