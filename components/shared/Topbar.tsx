@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { menuContent } from "@/constants"
 import Link from 'next/link';
 import Image from 'next/image';
+import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
 const Topbar = () => {
     const [menuActive, setMenuActive] = useState(false);
@@ -25,8 +26,18 @@ const Topbar = () => {
         }
     }, true)
 
+    const handleMenuOpen = () => {
+        if (menuActive) {
+            setMenuActive(false);
+            enablePageScroll();
+        } else {
+            setMenuActive(true);
+            disablePageScroll();
+        }
+    }
+
     return (
-        <div className={`p-10 transition-all dark:bg-black bg-glassmorphism z-50 top-0 w-full ${fixedScrollbar ? "sticky bg-white px-8 py-6 opacity-95 top-0 left-0" : ""} ${menuActive ? "h-screen sticky dark:opacity-95 p-16 backdrop-blur-2xl" : !fixedScrollbar ? "backdrop-blur-sm dark:opacity-60 bg-transparent" : ""}`}>
+        <div className={`p-10 transition-all dark:bg-black bg-glassmorphism z-50 top-0 w-screen ${fixedScrollbar ? "sticky bg-white px-8 py-6 opacity-95 top-0 left-0" : ""} ${menuActive ? "h-screen sticky dark:opacity-95 p-16 backdrop-blur-2xl" : !fixedScrollbar ? "backdrop-blur-sm dark:opacity-60 bg-transparent" : ""}`}>
 
             <div className='w-full flex items-center justify-between'>
                 <Link href='/' className='flex gap-3'>
@@ -43,7 +54,7 @@ const Topbar = () => {
                 </Link>
 
                 <div
-                    onClick={() => setMenuActive(!menuActive)}
+                    onClick={handleMenuOpen}
                     className={`h-[20px] w-[25px] flex flex-col cursor-pointer ${menuActive ? "justify-between" : "gap-[5px]"}`}
                 >
                     <div className={`h-[4px] w-full relative transition-all bg-black dark:bg-white rounded-lg ${menuActive ? "top-[50%] rotate-[45deg]" : ""}`} />
@@ -62,6 +73,9 @@ const Topbar = () => {
                             <p className={`text-xl transition-all animate-[fadeIn_1s_ease-in-out]`}>{menu.name}</p>
                         </Link>
                     ))}
+                    {/* <a href="https://store.shitworks.co" target='_blank' onClick={() => setMenuActive(false)}>
+                        <p className={`text-xl transition-all animate-[fadeIn_1s_ease-in-out]`}>Store</p>
+                    </a> */}
 
                     <div className={`mt-10 cursor-pointer ${darkMode ? 'invert' : ""}`} onClick={() => setDarkMode(!darkMode)}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z"></path></svg>
