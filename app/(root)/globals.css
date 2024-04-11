@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 @-webkit-keyframes bg-scrolling-reverse {
     100% {
         background-position: 50px 50px;
@@ -70,4 +74,3 @@ body {
     background: url("/assets/bg-dark.png") repeat 0 0;
     color: white;
 }
-

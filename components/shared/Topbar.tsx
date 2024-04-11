@@ -69,7 +69,7 @@ const Topbar = () => {
             {menuActive && (
                 <div className='h-full w-full flex flex-col gap-3 items-center justify-center'>
                     {menuContent.map((menu, index) => (
-                        <Link href={menu.link} onClick={() => setMenuActive(false)} key={`menu-${index}`}>
+                        <Link href={menu.link} onClick={handleMenuOpen} key={`menu-${index}`}>
                             <p className={`text-xl transition-all animate-[fadeIn_1s_ease-in-out]`}>{menu.name}</p>
                         </Link>
                     ))}
