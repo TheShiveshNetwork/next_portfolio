@@ -34,9 +34,9 @@ const ProjectsTimeline = ({ image, date, idx, heading, content, nativeButton, cu
                         <Image
                             src={image}
                             alt="image"
-                            height={300}
-                            width={300}
-                            className="shadow-xl"
+                            height={500}
+                            width={500}
+                            className="shadow-xl w-full sm:w-[400px] h-auto"
                         />
                     </div>
                 )}

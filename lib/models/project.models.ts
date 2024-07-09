@@ -23,14 +23,14 @@ const projectSchema = new Schema<ProjectDocument>({
     heading: { type: String, required: true },
     content: { type: String, required: true },
     nativeButton: {
-        text: { type: String, required: true },
+        text: { type: String },
         className: { type: String },
-        action: { type: String, required: true },
+        action: { type: String },
     },
     customButton: {
-        text: { type: String, required: true },
+        text: { type: String },
         className: { type: String },
-        action: { type: String, required: true },
+        action: { type: String },
     },
 });
 
