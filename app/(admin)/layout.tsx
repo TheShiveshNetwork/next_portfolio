@@ -1,9 +1,9 @@
 import '../globals.css'
 import AuthProvider from "@/components/provider/AuthProvider"
 import { getServerSession } from "next-auth"
-import { authOptions } from '../api/auth/[...nextauth]/route'
 import { redirect } from 'next/navigation'
 import Sidebar from '@/components/admin/Sidebar'
+import { authOptions } from '@/lib/authOptions'
 
 export default async function RootLayout({
     children,
