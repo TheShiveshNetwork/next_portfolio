@@ -18,9 +18,9 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Forks][forks-shield]][https://github.com/TheShiveshNetwork/next_portfolio/forks]
-[![Stargazers][stars-shield]][https://github.com/TheShiveshNetwork/next_portfolio/stargazers]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/shivesh-tiwari-88b451242]
+[![Forks][forks-shield]](https://github.com/TheShiveshNetwork/next_portfolio/forks)
+[![Stargazers][stars-shield]](https://github.com/TheShiveshNetwork/next_portfolio/stargazers)
+[![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/shivesh-tiwari-88b451242)
 
 
 <!-- PROJECT LOGO -->
