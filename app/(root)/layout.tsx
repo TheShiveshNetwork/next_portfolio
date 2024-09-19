@@ -13,8 +13,8 @@ const Topbar = dynamic(() => import('@/components/shared/Topbar'), { ssr: false 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'The Shivesh Network',
-  description: 'Shivesh Full Stack Developer Portfolio',
+  title: 'The Shivesh Network, Shitworks',
+  description: 'Shivesh Tiwari Full Stack Developer Portfolio',
 }
 
 export default function RootLayout({

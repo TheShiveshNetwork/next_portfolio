@@ -1,5 +1,5 @@
 import { Model, models, model, Document, Schema } from "mongoose";
-import bcrypt from "bcrypt"
+import * as bcrypt from "bcryptjs";
 
 interface UserDocument extends Document {
     email: string;

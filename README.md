@@ -1,34 +1,126 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/TheShiveshNetwork Next Portfolio Template/pull/73 -->
+<a id="readme-top"></a>
+<!--
+*** Thanks for checking out the TheShiveshNetwork Next Portfolio Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
+
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Forks][forks-shield]][https://github.com/TheShiveshNetwork/next_portfolio/forks]
+[![Stargazers][stars-shield]][https://github.com/TheShiveshNetwork/next_portfolio/stargazers]
+[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/shivesh-tiwari-88b451242]
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/TheShiveshNetwork Next Portfolio Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+  <h3 align="center">TheShiveshNetwork Next Portfolio Template</h3>
+
+  <p align="center">
+    <div>A simple minimalistic portfolio website based on nextjs with in built CMS</div>
+    <br />
+    <a href="https://github.com/TheShiveshNetwork/TheShiveshNetwork Next Portfolio Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/TheShiveshNetwork Next Portfolio Template">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/TheShiveshNetwork Next Portfolio Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/TheShiveshNetwork Next Portfolio Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+</div>
+
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+## 💻 TheShiveshNetwork: Your Minimalist Portfolio Hub 
+
+🚀  Showcase your skills and passions with TheShiveshNetwork, a sleek and simple portfolio website built with Next.js. 
+
+✨ **Features:**
+
+* **Built-in CMS:** Effortlessly manage your content without touching code.
+* **Minimalist Design:** Focus on your work with a clean and modern aesthetic.
+* **Next.js Power:** Enjoy blazing-fast performance and SEO optimization.
+
+🎉  Start building your dream portfolio today! 
+
+
+
+### Built With
+
+* [![Next][Next.js]][Next-url]
+* [![React][React.js]][React-url]
+
+
+
+<!-- GETTING STARTED -->
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple example steps.
 
-```bash
+### Setup
+
+1. Clone the repo
+```sh
+git clone https://github.com/TheShiveshNetwork/next_portfolio Next Portfolio Template.git
+```
+2. Install NPM packages
+```sh
+npm install
+```
+3. Start the server
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Create an Admin Account for CMS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Run the create-admin command
+```sh
+npm run create-admin
+```
+2. Enter your details
+```
+Enter your name: 
+Enter your email:
+Enter yout password:
+```
+Your new user account is created.
+3. Go to `http://localhost:3000/sign-in` and login with your credentials to access the admin panel
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+<!-- CONTACT -->
+## Contact
 
-To learn more about Next.js, take a look at the following resources:
+Shivesh Tiwari
+[Linkedin](https://www.linkedin.com/in/shivesh-tiwari-88b451242)
+[Buy me a coffee](https://buymeacoffee.com/mrdevknown404)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Project Link: [https://github.com/TheShiveshNetwork/${{project}}](https://github.com/TheShiveshNetwork/${{project}})
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
