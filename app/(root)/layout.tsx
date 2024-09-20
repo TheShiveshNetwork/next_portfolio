@@ -7,15 +7,11 @@ import DotRing from '@/components/DotRing/DotRing'
 import dynamic from 'next/dynamic'
 import { montserrat } from '@/constants'
 import { Analytics } from '@vercel/analytics/react';
+import { ThemeProvider } from 'next-themes';
 
 const Topbar = dynamic(() => import('@/components/shared/Topbar'), { ssr: false })
 
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'The Shivesh Network, Shitworks',
-  description: 'Shivesh Tiwari Full Stack Developer Portfolio',
-}
 
 export default function RootLayout({
   children,
@@ -25,18 +21,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
-        <title>TheShiveshNetwork</title>
+        <title>TheShiveshNetwork | Shitworks</title>
       </Head>
       <body className={montserrat.className}>
-        <Topbar />
+        <ThemeProvider attribute="class" enableSystem>
+          <Topbar />
 
-        <DotRing />
+          <DotRing />
 
-        <main>
-          {children}
-        </main>
+          <main>
+            {children}
+          </main>
 
-        <Analytics />
+          {/* Generate Vercel Analytics */}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   )

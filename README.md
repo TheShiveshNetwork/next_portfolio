@@ -1,29 +1,10 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/TheShiveshNetwork Next Portfolio Template/pull/73 -->
 <a id="readme-top"></a>
-<!--
-*** Thanks for checking out the TheShiveshNetwork Next Portfolio Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Forks][forks-shield]](https://github.com/TheShiveshNetwork/next_portfolio/forks)
 [![Stargazers][stars-shield]](https://github.com/TheShiveshNetwork/next_portfolio/stargazers)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/shivesh-tiwari-88b451242)
 
-
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <h3 align="center">TheShiveshNetwork Next Portfolio Template</h3>
@@ -31,11 +12,17 @@
   <p align="center">
     <div>A simple minimalistic portfolio website based on nextjs with in built CMS</div>
     <br />
-    <a href="https://github.com/othneildrew/TheShiveshNetwork Next Portfolio Template">View Demo</a>
+    <a href="https://shitworks.co/">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/TheShiveshNetwork Next Portfolio Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/TheShiveshNetwork/next_portfolio/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/TheShiveshNetwork Next Portfolio Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/TheShiveshNetwork/next_portfolio/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+  </p>
+
+  <p align="center">
+    <a href="https://www.buymeacoffee.com/mrknown404" target="_blank">
+      <img src="https://github.com/TheShiveshNetwork/next_portfolio/blob/main/public/assets/buy-me-a-coffee.png?raw=true"  alt="Buy Me A Coffee" height="41" width="174">
+    </a>
   </p>
 </div>
 
@@ -56,6 +43,7 @@
 
 🎉  Start building your dream portfolio today! 
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTheShiveshNetwork%2Fnext_portfolio)
 
 
 ### Built With
@@ -77,13 +65,15 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/TheShiveshNetwork/next_portfolio Next Portfolio Template.git
+git clone https://github.com/TheShiveshNetwork/next_portfolio
 ```
 2. Install NPM packages
 ```sh
 npm install
 ```
-3. Start the server
+3. Setup `.env.local`
+- Copy the content of `.env.example` and create a new file`.env.local` to store env
+4. Start the server
 ```sh
 npm run dev
 ```
@@ -101,6 +91,7 @@ Enter your email:
 Enter yout password:
 ```
 Your new user account is created.
+
 3. Go to `http://localhost:3000/sign-in` and login with your credentials to access the admin panel
 
 

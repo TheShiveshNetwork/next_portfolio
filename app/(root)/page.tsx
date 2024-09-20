@@ -41,7 +41,7 @@ export default function Home() {
             <Link href={'/contact'} className='text-blue-500 uppercase font-semibold'> contact</Link> me for new ventures, and let's build something amazing together!
           </div>
 
-          <div className='sm:bg-white sm:dark:bg-slate-700 mt-5 sm:mt-10 md:mt-14 sm:shadow-lg sm:w-[70%] sm:rounded-t-lg self-center'>
+          <div className='sm:bg-white sm:dark:bg-slate-900 mt-5 sm:mt-10 md:mt-14 sm:shadow-lg sm:w-[70%] sm:rounded-t-lg self-center'>
             <div className="hidden sm:flex gap-2 p-2 w-full bg-gray-100 dark:bg-gray-800 rounded-t-lg justify-end">
               <div className="bg-green-300 h-2 w-2 rounded-full" />
               <div className="bg-yellow-300 h-2 w-2 rounded-full" />

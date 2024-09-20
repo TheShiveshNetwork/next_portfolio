@@ -6,17 +6,12 @@ import { menuContent } from "@/constants"
 import Link from 'next/link';
 import Image from 'next/image';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
+import { useTheme } from 'next-themes';
 
 const Topbar = () => {
+    const { theme, setTheme } = useTheme();
     const [menuActive, setMenuActive] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
     const [fixedScrollbar, setFixedScrollbar] = useState(false);
-
-    if (darkMode) {
-        document.documentElement.classList.add('dark')
-    } else {
-        document.documentElement.classList.remove('dark')
-    }
 
     window.addEventListener('scroll', () => {
         if (scrollY > 350) {
@@ -25,6 +20,14 @@ const Topbar = () => {
             setFixedScrollbar(false);
         }
     }, true)
+
+    const handleDarkModeToggle = () => {
+        if (theme === "light") {
+            setTheme("dark");
+        } else {
+            setTheme("light");
+        }
+    }
 
     const handleMenuOpen = () => {
         if (menuActive) {
@@ -77,7 +80,7 @@ const Topbar = () => {
                         <p className={`text-xl transition-all animate-[fadeIn_1s_ease-in-out]`}>Store</p>
                     </a> */}
 
-                    <div className={`mt-10 cursor-pointer ${darkMode ? 'invert' : ""}`} onClick={() => setDarkMode(!darkMode)}>
+                    <div className={`mt-10 cursor-pointer ${theme === "dark" ? 'invert' : ""}`} onClick={handleDarkModeToggle}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z"></path></svg>
                     </div>
                 </div>

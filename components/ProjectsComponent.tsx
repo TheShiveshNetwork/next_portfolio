@@ -3,8 +3,6 @@ import ProjectsTimeline from "./shared/ProjectsTimeline"
 
 const ProjectsComponent = async () => {
     const projects = await fetchProjects();
-    console.log(projects)
-
     return projects?.reverse().map((project, idx) => (
         <ProjectsTimeline
             key={`project-${idx}`}

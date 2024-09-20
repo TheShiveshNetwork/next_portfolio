@@ -27,7 +27,6 @@ const Page = () => {
 
     const handleFormSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
-        console.log("Form:", formData)
 
         try {
             const response = await fetch('/api/admin/create-project', {
