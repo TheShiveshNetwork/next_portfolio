@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 import { useTheme } from 'next-themes';
+import config from '@/configs/config';
 
 const Topbar = () => {
     const { theme, setTheme } = useTheme();
@@ -52,7 +53,7 @@ const Topbar = () => {
                         className='dark:invert'
                     />
                     <h1 className='text-2xl hidden sm:block font-semibold'>
-                        TheShiveshNetwork
+                        {config.portfolio_name}
                     </h1>
                 </Link>
 

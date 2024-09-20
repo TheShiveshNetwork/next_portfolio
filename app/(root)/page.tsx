@@ -1,6 +1,7 @@
 import PostsHorizontalTimeline from '@/components/PostsHorizontalTimeline'
 import SocialLinks from '@/components/shared/SocialLinks'
 import { ScrambleTexts } from '@/components/shared/TextScramble'
+import config from '@/configs/config'
 import { githubCodeUrl, satisfy, tilt_prism, toolsUsed, ubuntu } from '@/constants'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
@@ -23,15 +24,15 @@ export default function Home() {
             Crafting Digital Marvels
           </h1>
 
-          <h1 className='text-3xl mt-5 mb-5 font-extrabold'>
-            I'M SHIVESH TIWARI
+          <h1 className='text-3xl mt-5 mb-5 font-extrabold uppercase'>
+            I'M {config.name}
           </h1>
 
           <SocialLinks className="mb-4" />
 
           <div>
-            A passionate and versatile Full Stack Web Developer with a knack for turning ideas into immersive online experiences.
-            I'm on a mission to create remarkable digital experiences. With a portfolio of exciting
+            {config.headline} 
+            With a portfolio of exciting
             <Link href={'/projects'} className='text-blue-500 uppercase font-semibold'> projects</Link> showcasing my passion for coding, you can learn more <Link href={'/about'} className='text-blue-500 uppercase font-semibold'> about me</Link>.
             <p className='hidden sm:block'>
               From front-end magic to server-side wizardry, I love blending creativity with code to craft pixel-perfect websites and powerful web applications.

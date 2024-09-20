@@ -1,9 +1,5 @@
+import config from "@/configs/config";
 import { Montserrat, Tilt_Prism, Satisfy, Ubuntu } from "next/font/google"
-
-export const FormatDate = (dateObj) => {
-    const options = { day: '2-digit', month: 'short', year: 'numeric' };
-    return new Intl.DateTimeFormat('en-US', options).format(dateObj);
-}
 
 export const tilt_prism = Tilt_Prism({
     subsets: ['latin'],
@@ -83,11 +79,11 @@ export const SocialData = [
     {
         name: 'Linkedin',
         icon: '/assets/linkedin.svg',
-        url: "https://www.linkedin.com/in/shivesh-tiwari-88b451242",
+        url: config.linkedinUrl,
     },
     {
         name: 'Github',
         icon: '/assets/github.svg',
-        url: "https://github.com/TheShiveshNetwork",
+        url: config.githubUrl,
     },
 ]

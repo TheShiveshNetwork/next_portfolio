@@ -1,7 +1,7 @@
 "use client"
 
-import { FormatDate } from "@/constants"
-import Link from "next/link"
+import { FormatDate } from "@/lib/formatDate";
+import Link from "next/link";
 import { useState } from "react";
 import Loader from "../Loader";
 

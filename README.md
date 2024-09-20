@@ -34,6 +34,7 @@
 ## 💻 TheShiveshNetwork: Your Minimalist Portfolio Hub 
 
 🚀  Showcase your skills and passions with TheShiveshNetwork, a sleek and simple portfolio website built with Next.js. 
+Create your personal portfolio website in few simple steps. Why need to touch the code to change stactic content? [Change it in a few simple steps.](#customization)
 
 ✨ **Features:**
 
@@ -94,6 +95,10 @@ Your new user account is created.
 
 3. Go to `http://localhost:3000/sign-in` and login with your credentials to access the admin panel
 
+
+### Customization
+
+1. Go to `configs/config.ts` file and change the content according to you.
 
 <!-- CONTACT -->
 ## Contact

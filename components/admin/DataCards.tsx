@@ -1,4 +1,4 @@
-import { FormatDate } from "@/constants";
+import { FormatDate } from "@/lib/formatDate";
 import { fetchPosts } from "@/lib/actions/post.actions";
 import { fetchProjects } from "@/lib/actions/projects.actions";
 import Image from "next/image";

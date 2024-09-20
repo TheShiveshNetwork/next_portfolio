@@ -1,4 +1,4 @@
-import { FormatDate } from "@/constants";
+import { FormatDate } from "@/lib/formatDate";
 import { findPostById } from "@/lib/actions/post.actions";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
