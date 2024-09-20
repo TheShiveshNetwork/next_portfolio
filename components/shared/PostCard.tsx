@@ -3,7 +3,7 @@
 import { FormatDate } from "@/constants"
 import Link from "next/link"
 import { useState } from "react";
-import Loading from "../Loading";
+import Loader from "../Loader";
 
 const PostCard = ({ id, title, idx, description, createdAt }: { id: string, title: string, idx: number, description: string, createdAt: Date }) => {
     const [loading, setLoading] = useState(false);
@@ -33,7 +33,7 @@ const PostCard = ({ id, title, idx, description, createdAt }: { id: string, titl
                     </p>
                 )}
             </div>
-            {loading && <Loading />}
+            {loading && <Loader />}
         </>
     )
 }

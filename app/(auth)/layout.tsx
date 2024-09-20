@@ -1,18 +1,15 @@
 import '../globals.css';
-import AuthProvider from "@/components/provider/AuthProvider"
 
-export default function RootLayout({
+export default function AuthLayout({
     children,
 }: {
     children: React.ReactNode
 }) {
     return (
-            <html lang="en">
-                <body>
-                    <main>
-                        {children}
-                    </main>
-                </body>
-            </html>
+        <main>
+            <main>
+                {children}
+            </main>
+        </main>
     )
 }

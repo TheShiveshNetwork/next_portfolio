@@ -68,7 +68,6 @@ const Topbar = () => {
                 </div>
             </div>
 
-
             {menuActive && (
                 <div className='h-full w-full flex flex-col gap-3 items-center justify-center'>
                     {menuContent.map((menu, index) => (
@@ -76,9 +75,6 @@ const Topbar = () => {
                             <p className={`text-xl transition-all animate-[fadeIn_1s_ease-in-out]`}>{menu.name}</p>
                         </Link>
                     ))}
-                    {/* <a href="https://store.shitworks.co" target='_blank' onClick={() => setMenuActive(false)}>
-                        <p className={`text-xl transition-all animate-[fadeIn_1s_ease-in-out]`}>Store</p>
-                    </a> */}
 
                     <div className={`mt-10 cursor-pointer ${theme === "dark" ? 'invert' : ""}`} onClick={handleDarkModeToggle}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 12c0 6.627 5.373 12 12 12s12-5.373 12-12-5.373-12-12-12-12 5.373-12 12zm2 0c0-5.514 4.486-10 10-10v20c-5.514 0-10-4.486-10-10z"></path></svg>
@@ -89,4 +85,4 @@ const Topbar = () => {
     )
 }
 
-export default Topbar
+export default Topbar;

@@ -1,4 +1,4 @@
-import HorizontalTimeline from '@/components/shared/HorizontalTimeline'
+import PostsHorizontalTimeline from '@/components/PostsHorizontalTimeline'
 import SocialLinks from '@/components/shared/SocialLinks'
 import { ScrambleTexts } from '@/components/shared/TextScramble'
 import { githubCodeUrl, satisfy, tilt_prism, toolsUsed, ubuntu } from '@/constants'
@@ -71,7 +71,7 @@ export default function Home() {
       <section className='px-10 lg:px-64'>
         <h1 className='text-3xl font-semibold'>Latest Stuff</h1>
 
-        <HorizontalTimeline
+        <PostsHorizontalTimeline
           className='mb-40 mt-10'
         />
       </section>

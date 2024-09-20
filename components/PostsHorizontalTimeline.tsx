@@ -1,13 +1,11 @@
-import { FormatDate } from "@/constants";
 import { fetchPosts } from "@/lib/actions/post.actions";
-import Link from "next/link";
-import PostCard from "./PostCard";
+import PostCard from "./shared/PostCard";
 
 interface Props {
     className: string;
 }
 
-const HorizontalTimeline = async ({ className }: Props) => {
+const PostsHorizontalTimeline = async ({ className }: Props) => {
     const posts = await fetchPosts();
 
     return (
@@ -39,4 +37,4 @@ const HorizontalTimeline = async ({ className }: Props) => {
     )
 }
 
-export default HorizontalTimeline
+export default PostsHorizontalTimeline;
