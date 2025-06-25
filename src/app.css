@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+:root {
+  --primary-bg: #0f0f0f;
+  --primary-fg: #fefefe;
+}
+
+body {
+  background: var(--primary-bg);
+  color: var(--primary-fg);
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.app-container {
+  @apply px-10 md:px-40;
+}
+
+@keyframes warp {
+    0%, 100% {
+      transform: scale(1) translate(0, 0) rotate(0deg);
+      border-radius: 50%;
+    }
+    25% {
+      transform: scale(1.15, 0.9) translate(8px, -8px) rotate(3deg);
+      border-radius: 48% 52% 50% 50%;
+    }
+    50% {
+      transform: scale(0.95, 1.1) translate(-6px, 6px) rotate(-3deg);
+      border-radius: 52% 48% 50% 50%;
+    }
+    75% {
+      transform: scale(1.05, 0.95) translate(4px, -4px) rotate(2deg);
+      border-radius: 49% 51% 50% 50%;
+    }
+  }
+
+  .animate-warp {
+    animation: warp 10s ease-in-out infinite;
+  }
+  
+  .animate-warp-fast {
+    animation: warp 4s ease-in-out infinite;
+  }

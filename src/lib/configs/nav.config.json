@@ -1,0 +1,20 @@
+{
+  "name": "nav-config",
+  "values": [
+    {
+      "name": "work",
+      "label": "Work",
+      "href": "/work"
+    },
+    {
+      "name": "blog",
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "name": "projects",
+      "label": "Projects",
+      "href": "/projects"
+    }
+  ]
+}
