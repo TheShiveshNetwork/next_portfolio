@@ -21,7 +21,7 @@ const TechTag = ({
     );
 };
 
-const Techs = () => {
+export const TechSection = () => {
     return (
         <section className="relative flex flex-col items-center justify-center overflow-hidden py-14">
             <div className="relative flex flex-col max-w-4xl w-full px-6 md:px-0">
@@ -61,5 +61,3 @@ const Techs = () => {
         </section>
     );
 };
-
-export default Techs;

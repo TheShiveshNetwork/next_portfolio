@@ -93,7 +93,7 @@ export const MediumPosts: React.FC<MediumPostsProps> = ({
     }
 
     return (
-        <div id='blogs' className="relative w-full flex items-center justify-center py-14">
+        <div id='blogs' className="relative w-full flex items-center justify-center mt-8 py-14">
             <div className="flex flex-col max-w-4xl w-full px-6 md:px-0">
                 {/* Header */}
                 <div className="mb-6 flex justify-between items-center">

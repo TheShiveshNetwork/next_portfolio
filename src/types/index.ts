@@ -11,6 +11,8 @@ export interface IAppConfig {
     profile: {
         name: string;
         image: string;
+        email: string;
+        location: string;
         sentences: string[];
         panel: {
             icon: React.ElementType;

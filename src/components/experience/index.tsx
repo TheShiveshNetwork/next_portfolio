@@ -9,9 +9,6 @@ export function Experience() {
                     <div className="text-4xl font-bold mb-2">
                         Experience
                     </div>
-                    <p className='max-w-2xl text-secondary-foreground/60'>
-                        These our the places I have worked at
-                    </p>
                 </div>
                 <WorkExperience experiences={appConfig.experience} />
             </div>

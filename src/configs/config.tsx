@@ -7,6 +7,8 @@ export const appConfig: IAppConfig = {
     profile: {
         name: 'Shivesh Tiwari',
         image: 'https://pbs.twimg.com/profile_images/1907872571028058112/bj7cnwbr_400x400.jpg',
+        email: 'shiveshtiwari0@gmail.com',
+        location: 'Bengaluru, India',
         sentences: [
             'Full stack engineer',
             'App Developer',
@@ -71,7 +73,7 @@ export const appConfig: IAppConfig = {
         {
             id: "1",
             companyName: "Escaleit",
-            companyLogo: "http://escaleit.in/_app/immutable/assets/escaleit_logo.DmD4-_D8.png",
+            companyLogo: "https://escaleit.in/_app/immutable/assets/escaleit_logo.DmD4-_D8.png",
             isCurrentEmployer: true,
             positions: [
                 {

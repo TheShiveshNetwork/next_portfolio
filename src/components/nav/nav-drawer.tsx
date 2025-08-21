@@ -11,10 +11,12 @@ import {
 import { Menu } from "lucide-react"
 import { navLinks } from "@/configs/nav.config"
 import Link from "next/link"
+import { useState } from "react";
 
 export function NavDrawer() {
+    const [open, setOpen] = useState(false);
     return (
-        <Drawer>
+        <Drawer open={open} onOpenChange={setOpen}>
             <DrawerTrigger asChild>
                 <Menu />
             </DrawerTrigger>
@@ -25,7 +27,7 @@ export function NavDrawer() {
                 </DrawerHeader>
                 <div className="flex items-center justify-center flex-col space-y-2 pb-8">
                     {navLinks.map((link) => (
-                        <Link key={`nav-link-${link.name}`} href={link.href}>
+                        <Link key={`nav-link-${link.name}`} href={link.href} onClick={() => setOpen(false)}>
                             {link.label}
                         </Link>
                     ))}

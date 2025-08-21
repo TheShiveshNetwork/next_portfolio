@@ -1,11 +1,9 @@
 import { FlipSentences } from "@/components/common/flip-sentences";
-import { Separator } from "@/components/common/separator";
 import { VerifiedIcon } from "@/components/common/verified-icon";
 import { ProfileHeader } from "@/components/hero/profile-header";
 import { Button } from "@/components/ui/button";
 import { SimpleTooltip } from "@/components/ui/tooltip";
 import { appConfig } from "@/configs/config";
-import { MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -38,52 +36,15 @@ export const HeroSection = () => {
                 </div>
             </div>
             <div className="flex items-start max-w-4xl w-full px-6 md:px-0 mt-4">
-                <Button
-                    variant={"default"}
-                    className="bg-blue-500/80 hover:bg-blue-500/90 transition-colors text-primary rounded-xl cursor-pointer ml-1 md:ml-7.5"
-                >
-                    Contact Me
-                </Button>
+                <Link href={`mailto:${appConfig.profile.email}`}>
+                    <Button
+                        variant={"default"}
+                        className="bg-blue-500/80 hover:bg-blue-500/90 transition-colors text-primary rounded-xl cursor-pointer ml-0.5 md:ml-7.5"
+                    >
+                        Contact Me
+                    </Button>
+                </Link>
             </div>
-            <div className="grid md:grid-cols-2 gap-2 max-w-4xl w-full px-6 md:px-0 mt-14">
-                <ProfilePanel />
-            </div>
-            <Separator className="mt-10 w-full" />
-            <div className="grid md:grid-cols-2 gap-4 max-w-4xl w-full py-10 px-6 relative">
-                <SocialPanel />
-                <div className="absolute -z-1 top-0 left-0 h-full w-full border-primary opacity-10 border-l border-r"></div>
-            </div>
-            <Separator className="w-full" />
         </div>
     );
 };
-
-function ProfilePanel() {
-    return appConfig.profile.panel.map((item, index) => (
-        <div key={index} className="flex items-center gap-2">
-            <div className="p-2 bg-secondary/50 rounded-md text-primary/60 border-l-2 border-t-2 border-b border-r border-primary/10 shadow-md shadow-secondary/50">
-                <item.icon className="h-3.5 w-3.5" />
-            </div>
-            <div className="text-md text-primary">{item.text}</div>
-        </div>
-    ));
-}
-
-function SocialPanel() {
-    return appConfig.profile.socials.map((item, index) => (
-        <Link
-            key={`social-link-${index}`}
-            href={item.link}
-            target="_blank"
-            className="flex items-center p-2 rounded-lg border justify-between gap-2 bg-secondary/20 hover:bg-secondary/40 transition-all"
-        >
-            <div className="flex gap-4 items-center">
-                <div className="h-16 w-16 bg-secondary/50 rounded-md text-primary/60 border-l-2 border-t-2 border-b border-r border-primary/10 shadow-md shadow-secondary/50 flex items-center justify-center">
-                    <item.icon className="h-8 w-8" />
-                </div>
-                <div className="text-lg text-primary font-semibold">{item.name}</div>
-            </div>
-            <MoveUpRight className="h-4 w-4 mr-4" />
-        </Link>
-    ));
-}

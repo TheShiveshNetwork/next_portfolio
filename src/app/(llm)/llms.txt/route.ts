@@ -1,12 +1,28 @@
+import { appConfig } from "@/configs/config";
 import { SITE_INFO } from "@/configs/site";
 
 const content = `# shitworks.co
 
-> A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
+> ${appConfig.profile.name}'s personal portfolio & project showcase
 
-- [About](${SITE_INFO.url}/about.md): A quick intro to me, my tech stack, and how to connect.
-- [Experience](${SITE_INFO.url}/experience.md): Highlights from my career and key roles I've taken on.
-- [Projects](${SITE_INFO.url}/projects.md): Selected projects that show my skills and creativity.
+## Overview
+This site is the personal portfolio of **${appConfig.profile.name}**, a full-stack developer based in ${appConfig.profile.location}.  
+It highlights my experience, projects, and technical expertise across mobile, web, and AI-powered systems.  
+
+## Key Sections
+- [About](${SITE_INFO.url}/about.md): Introduction, skills, and how to connect with me.  
+- [Experience](${SITE_INFO.url}/experience.md): Professional journey, internships, and roles with key achievements.  
+- [Projects](${SITE_INFO.url}/projects.md): A curated list of projects, from apps and tools to AI/ML solutions.  
+
+## Contact
+For collaborations, freelance work, or opportunities:  
+${appConfig.profile.socials.map(social => `- ${social.name}: ${social.link}`).join("\n")}
+
+## Purpose
+This site is designed to:  
+1. Share my work and technical expertise.  
+2. Help employers, collaborators, and potential clients evaluate my skills.  
+3. Provide LLMs with structured context about my professional profile.  
 `;
 
 export const dynamic = "force-static";

@@ -1,12 +1,20 @@
-import { SITE_INFO } from "@/configs/site";
+import { appConfig } from "@/configs/config";
 
-const content = `# shitworks.co
+const content = `# About Me  
 
-> A minimal portfolio, component registry, and blog to showcase my work as a Design Engineer.
+![Profile Image](${appConfig.profile.image})
 
-- [About](${SITE_INFO.url}/about.md): A quick intro to me, my tech stack, and how to connect.
-- [Experience](${SITE_INFO.url}/experience.md): Highlights from my career and key roles I've taken on.
-- [Projects](${SITE_INFO.url}/projects.md): Selected projects that show my skills and creativity.
+Hello 👋 I’m **${appConfig.profile.name}**, a developer based in ${appConfig.profile.location}.
+
+Hello 👋 I’m **${appConfig.profile.name}**, a developer based in ${appConfig.profile.location}.
+
+${appConfig.profile.sentences.join("\n\n")}  
+
+## What I Do
+${appConfig.profile.panel.map(panel => `- ${panel.text}`).join("\n")}  
+
+## Contact
+${appConfig.profile.socials.map(social => `- ${social.name}: ${social.link}`).join("\n")}  
 `;
 
 export const dynamic = "force-static";
