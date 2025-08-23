@@ -81,7 +81,9 @@ export const appConfig: IAppConfig = {
                     title: "Co-founder",
                     employmentPeriod: "Jan 2025 - Present",
                     employmentType: "Full-time",
-                    description: "Leading a marketing agency",
+                    description: `- Co-Founded a marketting agency, based in Bangalore India.
+- Developed the website for it, automated workflows, ran analytics, SEO, ad tools, etc.
+- Been handling all the technical sides`,
                     icon: "business",
                     skills: ["SEO", "Marketing"],
                     isExpanded: true,
@@ -98,7 +100,12 @@ export const appConfig: IAppConfig = {
                     title: "Full stack Engineer Intern",
                     employmentPeriod: "Dec 2022 - Jun 2025",
                     employmentType: "Full-time",
-                    description: "Leading a team of developers to build scalable web applications.",
+                    description: `- Worked as a remote developer on a platform using which shopkeepers can create and
+ manage their e-commerce portals.
+ - Collaborated with other developers to create the backend for the seller and customer
+ facing dashboards and built a robust authentication architecture.
+ - Developed the initial landing page and frontend for the website.
+                    `,
                     icon: "code",
                     skills: ["Typescript", "Express", "MongoDB", "Node.js", "React"],
                     isExpanded: true,
