@@ -23,7 +23,7 @@ interface AskAIButtonProps {
 }
 
 export const AskAIButton = ({
-    websiteUrl = `${SITE_INFO.url}/llms.txt`,
+    websiteUrl = `${SITE_INFO.url}`,
     questions = "Explain this website in brief?",
     className,
 }: AskAIButtonProps) => {
