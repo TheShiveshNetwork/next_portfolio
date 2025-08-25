@@ -1,7 +1,7 @@
 import { appConfig } from "@/configs/config";
 import { SITE_INFO } from "@/configs/site";
 
-const content = `# shitworks.co
+const content = `# ${SITE_INFO.url.slice(8)}
 
 > ${appConfig.profile.name}'s personal portfolio & project showcase
 
@@ -25,7 +25,7 @@ This site is designed to:
 3. Provide LLMs with structured context about my professional profile.  
 `;
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export async function GET() {
     return new Response(content, {

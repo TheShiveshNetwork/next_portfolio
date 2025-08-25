@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { IAppConfig } from "@/types";
 import { Code, Github, Globe, Lightbulb, Linkedin, MapPin, TwitterIcon } from "lucide-react";
 import Link from "next/link";
+import { SITE_INFO } from "./site";
 
 export const appConfig: IAppConfig = {
     profile: {
@@ -38,7 +39,7 @@ export const appConfig: IAppConfig = {
             {
                 icon: Globe,
                 text: <Button variant={"link"} className="p-0 text-md">
-                    <Link href={'https://shitworks.co'}>shitworks.co</Link>
+                    <Link href={SITE_INFO.url}>{SITE_INFO.url.slice(8)}</Link>
                 </Button>,
             },
         ],

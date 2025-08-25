@@ -10,6 +10,7 @@ import { Button } from "../ui/button";
 import { GithubIcon } from "lucide-react";
 import { appConfig } from "@/configs/config";
 import { usePathname } from "next/navigation";
+import { SITE_INFO } from "@/configs/site";
 
 export function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -26,11 +27,11 @@ export function Navbar() {
 
     return (
         <nav
-            className={`w-full fixed top-0 left-0 z-50 px-6 md:px-0 h-14 flex items-center
+            className={`w-screen fixed top-0 left-0 z-50 px-6 md:px-0 h-14 flex items-center
                         ${isScrolled && "bg-background/50 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-0 shadow-md"}`}
         >
             <div className="mx-auto max-w-4xl w-full flex items-center justify-between">
-                <Link href={"/"} className="font-semibold">Shitworks</Link>
+                <Link href={"/"} className="font-semibold">{SITE_INFO.site_name}</Link>
                 <div className="hidden md:flex items-center gap-4">
                     {navLinks.slice(1).map(link => (
                         <NavLink key={link.name} {...link} />

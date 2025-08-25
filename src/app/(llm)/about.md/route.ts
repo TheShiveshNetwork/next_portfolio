@@ -17,7 +17,7 @@ ${appConfig.profile.panel.map(panel => `- ${panel.text}`).join("\n")}
 ${appConfig.profile.socials.map(social => `- ${social.name}: ${social.link}`).join("\n")}  
 `;
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export async function GET() {
     return new Response(content, {

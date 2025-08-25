@@ -1,3 +1,4 @@
+import { SITE_INFO } from "@/configs/site";
 import Link from "next/link";
 
 export function Footer() {
@@ -6,7 +7,7 @@ export function Footer() {
             <div className="flex justify-between items-center py-4 max-w-4xl w-full text-primary/80 px-6 md:px-0">
                 <div className="">
                     &copy; {new Date().getFullYear()} {" "}
-                    <Link href="https://shitworks.co" className="underline-offset-4 hover:underline" target="_blank">shitworks.co</Link>
+                    <Link href={SITE_INFO.url} className="underline-offset-4 hover:underline" target="_blank">{SITE_INFO.url.slice(8)}</Link>
                 </div>
                 <Link href="/llms.txt" className="underline-offset-4 hover:underline" target="_blank">llms.txt</Link>
             </div>

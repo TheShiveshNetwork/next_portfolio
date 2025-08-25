@@ -1,5 +1,6 @@
 "use client";
 
+import { AskAIButton } from "../common/ask-ai-button";
 import { FlipWords } from "../common/flip-words";
 import DotPattern from "../ui/dot-pattern";
 
@@ -10,6 +11,7 @@ export function ProfileHeader() {
                 <div className="text-6xl md:text-8xl">
                     <FlipWords word="I build Software" className="text-wrap font-borel" />
                 </div>
+                <AskAIButton className="absolute top-0 right-0" />
             </div>
             <DotPattern
                 width={20}
