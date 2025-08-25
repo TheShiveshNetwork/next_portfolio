@@ -12,6 +12,7 @@ import { Menu } from "lucide-react"
 import { navLinks } from "@/configs/nav.config"
 import Link from "next/link"
 import { useState } from "react";
+import { SITE_INFO } from "@/configs/site";
 
 export function NavDrawer() {
     const [open, setOpen] = useState(false);
@@ -22,7 +23,7 @@ export function NavDrawer() {
             </DrawerTrigger>
             <DrawerContent>
                 <DrawerHeader>
-                    <DrawerTitle>Shitworks</DrawerTitle>
+                    <DrawerTitle>{SITE_INFO.site_name}</DrawerTitle>
                     <DrawerDescription>Navigate to the section</DrawerDescription>
                 </DrawerHeader>
                 <div className="flex items-center justify-center flex-col space-y-2 pb-8">

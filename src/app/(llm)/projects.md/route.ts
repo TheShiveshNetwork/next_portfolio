@@ -19,7 +19,7 @@ ${project.image ? `![Project Image](${project.image})` : ""}
 👉 See more on [my GitHub](${appConfig.githubUrl})  
 `;
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export async function GET() {
     return new Response(content, {

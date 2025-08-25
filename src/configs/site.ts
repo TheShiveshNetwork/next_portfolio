@@ -1,5 +1,8 @@
 export const SITE_INFO = {
+    site_name: 'Shitworks',
     url: 'https://shitworks.co',
+    meta_desc: 'Explore Shivesh Tiwari’s developer portfolio at shitworks.co. Showcasing web apps, innovative projects, and full-stack development work with a bold, creative edge. Discover how code, creativity, and problem-solving come together—sometimes messy, always effective.',
+    keywords: ['Shitworks', 'shitworks.co', 'Shivesh Tiwari', 'Developer', 'Developer Portfolio']
 }
 
 export const ABOUT_ME = `
