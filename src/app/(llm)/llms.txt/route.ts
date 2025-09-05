@@ -25,12 +25,12 @@ This site is designed to:
 3. Provide LLMs with structured context about my professional profile.  
 `;
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 export async function GET() {
     return new Response(content, {
         headers: {
-            "Content-Type": "text/markdown;charset=utf-8",
+            "Content-Type": "text/plain",
         },
     });
 }

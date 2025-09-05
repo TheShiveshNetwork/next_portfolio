@@ -17,12 +17,12 @@ ${appConfig.profile.panel.map(panel => `- ${panel.text}`).join("\n")}
 ${appConfig.profile.socials.map(social => `- ${social.name}: ${social.link}`).join("\n")}  
 `;
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 export async function GET() {
     return new Response(content, {
         headers: {
-            "Content-Type": "text/markdown;charset=utf-8",
+            "Content-Type": "text/plain",
         },
     });
 }

@@ -19,12 +19,12 @@ ${project.image ? `![Project Image](${project.image})` : ""}
 👉 See more on [my GitHub](${appConfig.githubUrl})  
 `;
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-static";
 
 export async function GET() {
     return new Response(content, {
         headers: {
-            "Content-Type": "text/markdown;charset=utf-8",
+            "Content-Type": "text/plain",
         },
     });
 }
