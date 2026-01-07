@@ -94,13 +94,13 @@ export const appConfig: IAppConfig = {
         {
             id: "2",
             companyName: "Livana Technologies",
-            companyLogo: "https://mybazaar.co.in/assets/Logo-Cxj6cGbY.png",
+            companyLogo: "https://mybazaar.co.in/favicon.ico",
             positions: [
                 {
                     id: "1-1",
                     title: "Full stack Engineer Intern",
-                    employmentPeriod: "Dec 2022 - Jun 2025",
-                    employmentType: "Full-time",
+                    employmentPeriod: "Dec 2023 - Jun 2025",
+                    employmentType: "Internship",
                     description: `- Worked as a remote developer on a platform using which shopkeepers can create and
  manage their e-commerce portals.
  - Collaborated with other developers to create the backend for the seller and customer
